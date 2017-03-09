@@ -9,7 +9,7 @@ A Cesta de Compras é um sistema de banco de dados para apoiar o consumidor no p
 
 ###1	COMPONENTES<br>
 Integrantes do grupo
-Eduardo couttor<br>
+Eduardo Couto<br>
 Edmiltho Santos<br>
 Igor Caniçali<br>
 
