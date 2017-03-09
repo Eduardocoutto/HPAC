@@ -8,7 +8,7 @@ Trabalho desenvolvido durante a disciplina de BD
 A Cesta de Compras é um sistema de banco de dados para apoiar o consumidor no planejamento da compra de produtos, tendo como sua principal função: consulta de tabelas de pesquisas de produtos. Para que essas atividades sejam realizadas, é necessário acessar as informações acerca dos estabelecimentos de venda e mantê-las atualizadas. Devem ser fornecidas facilidades de listagem das consultas de produtos, utilizando especificações como marcas, tipo do produto (alimento, bebida, etc), preço e local. O sistema deve gerar relatórios de acordo com a demanda de informações e parâmetros.
 
 ###1	COMPONENTES<br>
-Integrantes do grupo
+Integrantes do grupo:<br>
 Eduardo Couto<br>
 Edmiltho Santos<br>
 Igor Caniçali<br>
