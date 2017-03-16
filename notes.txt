@@ -1,0 +1,6 @@
+algumas ideias de tabelas:  pessoa {nome, sobrenome, nascimento, email, senha[hash para conferir], foto[caminho]}
+                            produto {nome. categoria.nome}
+                            Loja {nome, local}
+                            produto_loja {produto.nome, loja.nome, preço}
+                            categoria {nome, categoraia_pai}
+
