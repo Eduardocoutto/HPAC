@@ -35,9 +35,12 @@ A coleta de dados será feita em produtos mais populares como por exemplo: bebid
 ###4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
 
-Sugestão: https://balsamiq.com/products/mockups/<br>
+<!--Sugestão: https://balsamiq.com/products/mockups/<br>-->
 
-![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/telaMockup.jpg?raw=true "Title")<br>
+Link para telas mobile: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/Telas_Mobile.pdf
+Link para telas desktop:
+https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_desktop.pdf
 
 ####4.1 TABELA DE DADOS DO SISTEMA:
     Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas.
@@ -46,9 +49,9 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 
 ###5	MODELO CONCEITUAL<br>
     5.1 NOTACAO ENTIDADE RELACIONAMENTO
-![Alt text](https://github.com/discipbd1/trab01/blob/master/sample_MC.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/ModeloConceitual.jpg?raw=true "Modelo Conceitual")
     
-    5.2 NOTACAO UML (Caso esteja fazendo a disciplina de analise)
+ <!--   5.2 NOTACAO UML (Caso esteja fazendo a disciplina de analise)-->
 
 ####5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
