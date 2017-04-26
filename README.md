@@ -37,7 +37,7 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 <!--Sugestão: https://balsamiq.com/products/mockups/<br>-->
 
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/telaMockup.jpg?raw=true "Title")<br>
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/telasPrincipais.png?raw=true "Title")<br>
 Link para telas mobile: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/Telas_Mobile.pdf
 Link para telas desktop:
 https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_desktop.pdf
