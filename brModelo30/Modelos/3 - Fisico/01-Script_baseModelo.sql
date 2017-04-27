@@ -1,28 +1,28 @@
-CREATE TABLE pais (
+CREATE TABLE IF NOT EXISTS pais (
 ID_pais NUMERIC(10) PRIMARY KEY,
 nome VARCHAR(50)
 );
 
-CREATE TABLE estado (
+CREATE TABLE IF NOT EXISTS estado (
 ID_esta NUMERIC(10) PRIMARY KEY,
 ID_pais NUMERIC(10),
 nome VARCHAR(50),
 FOREIGN KEY(ID_pais) REFERENCES pais (ID_pais)
 );
 
-CREATE TABLE cidade (
+CREATE TABLE IF NOT EXISTS cidade (
 ID_cida NUMERIC(10) PRIMARY KEY,
 ID_esta NUMERIC(10),
 nome VARCHAR(50),
 FOREIGN KEY(ID_esta) REFERENCES estado (ID_esta)
 );
 
-CREATE TABLE avaliacao_sistema (
+CREATE TABLE IF NOT EXISTS avaliacao_sistema (
 nota DECIMAL(1),
 comentario VARCHAR(250)
 );
 
-CREATE TABLE endereço (
+CREATE TABLE IF NOT EXISTS endereço (
 ID_ende NUMERIC(10) PRIMARY KEY,
 ID_cida NUMERIC(10),
 bairro VARCHAR(20),
@@ -33,7 +33,7 @@ complemento VARCHAR(50),
 FOREIGN KEY(ID_cida) REFERENCES cidade (ID_cida)
 );
 
-CREATE TABLE supermecado (
+CREATE TABLE IF NOT EXISTS supermecado (
 ID_supe NUMERIC(10) PRIMARY KEY,
 ID_ende NUMERIC(10),
 nome VARCHAR(20),
@@ -42,7 +42,7 @@ logo INT NOT NULL,
 FOREIGN KEY(ID_ende) REFERENCES endereço (ID_ende)
 );
 
-CREATE TABLE pessoa (
+CREATE TABLE IF NOT EXISTS pessoa (
 ID_pess VARCHAR(10) PRIMARY KEY,
 ID_ende NUMERIC(10),
 nome VARCHAR(30),
@@ -52,19 +52,19 @@ nivel DECIMAL(10),
 FOREIGN KEY(ID_ende) REFERENCES endereço (ID_ende)
 );
 
-CREATE TABLE telefone (
+CREATE TABLE IF NOT EXISTS telefone (
 telefone_PK INT NOT NULL PRIMARY KEY,
 telefone CHAR(14)
 );
 
-CREATE TABLE email (
+CREATE TABLE IF NOT EXISTS email (
 email_PK INT NOT NULL PRIMARY KEY,
 ID_pess_FK VARCHAR(10),
 email VARCHAR(20),
 FOREIGN KEY(ID_pess_FK) REFERENCES pessoa (ID_pess)
 );
 
-CREATE TABLE lista_de_compras (
+CREATE TABLE IF NOT EXISTS lista_de_compras (
 ID_list NUMERIC(10) PRIMARY KEY,
 ID_pess VARCHAR(10),
 nome VARCHAR(15),
@@ -74,7 +74,7 @@ dataLemb DATE,
 FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess)
 );
 
-CREATE TABLE avalia (
+CREATE TABLE IF NOT EXISTS avalia (
 nota DECIMAL(1),
 Atributo2 VARCHAR(250),
 ID_supe VARCHAR(10),
@@ -82,7 +82,7 @@ ID_pord VARCHAR(10),
 ID_pess VARCHAR(10)/*falha: chave estrangeira*//*falha: chave estrangeira*//*falha: chave estrangeira*/
 );
 
-CREATE TABLE venda (
+CREATE TABLE IF NOT EXISTS venda (
 ID_supe NUMERIC(10),
 ID_pord NUMERIC(10),
 valido VARCHAR(10),
@@ -90,7 +90,7 @@ preço VARCHAR(10),
 FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe)
 );
 
-CREATE TABLE venda_atacado (
+CREATE TABLE IF NOT EXISTS venda_atacado (
 ID_supe NUMERIC(10),
 ID_pord NUMERIC(10),
 valido INTEGER,
@@ -99,13 +99,13 @@ quantidade VARCHAR(10),
 FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe)
 );
 
-CREATE TABLE contem (
+CREATE TABLE IF NOT EXISTS contem (
 ID_list NUMERIC(10),
 ID_pord NUMERIC(10),
 PRIMARY KEY(ID_list,ID_pord)
 );
 
-CREATE TABLE produto (
+CREATE TABLE IF NOT EXISTS produto (
 ID_pord NUMERIC(10) PRIMARY KEY,
 nome VARCHAR(20),
 tamanho INTEGER,
