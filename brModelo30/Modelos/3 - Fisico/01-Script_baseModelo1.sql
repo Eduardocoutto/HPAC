@@ -48,7 +48,7 @@ ID_ende INT,
 nome VARCHAR(30),
 login VARCHAR(10),
 senha VARCHAR(10),
-nivel DECIMAL(10),
+nivel INT(),
 FOREIGN KEY(ID_ende) REFERENCES endereço (ID_ende)
 );
 
