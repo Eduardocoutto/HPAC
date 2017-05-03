@@ -43,7 +43,7 @@ FOREIGN KEY(ID_ende) REFERENCES endereço (ID_ende)
 );
 
 CREATE TABLE IF NOT EXISTS pessoa (
-ID_pess VARCHAR(10) PRIMARY KEY,
+ID_pess INT PRIMARY KEY,
 ID_ende INT,
 nome VARCHAR(30),
 login VARCHAR(10),
@@ -65,7 +65,7 @@ FOREIGN KEY(ID_pess_FK) REFERENCES pessoa (ID_pess)
 
 CREATE TABLE IF NOT EXISTS lista_de_compras (
 ID_list INT PRIMARY KEY,
-ID_pess VARCHAR(10),
+ID_pess INT,
 nome VARCHAR(15),
 dataCria DATE,
 dataFim DATE,
@@ -78,7 +78,7 @@ nota DECIMAL(1),
 Atributo2 VARCHAR(250),
 ID_supe VARCHAR(10),
 ID_pord VARCHAR(10),
-ID_pess VARCHAR(10)/*falha: chave estrangeira*//*falha: chave estrangeira*//*falha: chave estrangeira*/
+ID_pess INT/*falha: chave estrangeira*//*falha: chave estrangeira*//*falha: chave estrangeira*/
 );
 
 CREATE TABLE IF NOT EXISTS venda (
