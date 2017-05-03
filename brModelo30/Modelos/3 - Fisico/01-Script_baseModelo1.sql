@@ -58,7 +58,6 @@ telefone CHAR(14)
 );
 
 CREATE TABLE IF NOT EXISTS email (
-email_PK INT NOT NULL PRIMARY KEY,
 ID_pess_FK VARCHAR(10),
 email VARCHAR(20),
 FOREIGN KEY(ID_pess_FK) REFERENCES pessoa (ID_pess)
