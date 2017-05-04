@@ -74,9 +74,11 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
 
 
 ###6	MODELO LÓGICO<br>
+
         a) inclusão do modelo lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
+        b) verificação de correspondencia com o modelo conceitual
         (não serão aceitos modelos que não estejam em conformidade)
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/ModeloLogico.jpg?raw=true "Modelo Conceitual")
 
 ###7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
