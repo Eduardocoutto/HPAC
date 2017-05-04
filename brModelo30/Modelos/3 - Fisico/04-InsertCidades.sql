@@ -3,14 +3,14 @@
 
 INSERT INTO cidade (ID_cida, ID_esta, nome)
 VALUES (1, 1, 'Serra'),
-		(2, 1, 'Vitória'),
+	(2, 1, 'VitÃ³ria'),
         (3, 1, 'Vila Velha'),
         (4, 1, 'Cariacica'),
         (5, 1, 'Guarapari'),
         (6, 1, 'Rio de Janeiro'),
         (7, 7, 'Salvador'),
         (8, 7, 'Feira de Santana'),
-		(9, 2, 'São Paulo'),
+	(9, 2, 'SÃ£o Paulo'),
         (10, 2, 'Campinas'),
         (11, 6, 'Rio de Janeiro'),
-        (12, 6, 'Niterói');
+        (12, 6, 'NiterÃ³i');
