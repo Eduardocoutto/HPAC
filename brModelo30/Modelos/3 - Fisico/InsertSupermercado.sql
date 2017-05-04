@@ -1,11 +1,11 @@
 INSERT INTO supermercado(ID_supe ,ID_ende ,nome , unidade ,logo)
-VALUES (01, 101, 'Devens', 'Serra', NULL),
-		(02, 102, 'Extrabom', 'Cariacica', NULL),
-		(03, 103, 'Wallmart', 'Vitória', NULL),
-		(04, 104, 'Carone', 'Serra', NULL),
-		(05, 105, 'Meridional', 'Aracruz', NULL),
-		(06, 106, 'Devens', 'Aracruz', NULL),
-		(07, 107, 'Carrefour', 'Serra', NULL),
-		(08, 108, 'Extrabom', 'Vila Velha', NULL),
-		(09, 109, 'Carrefour', 'Vitória', NULL),
-		(010, 200, 'Wallmart', 'Linhares', NULL);
+VALUES (1, 1, 'Devens', 'Serra', NULL),
+	(2, 2, 'Extrabom', 'Cariacica', NULL),
+	(3, 3, 'Wallmart', 'Vitória', NULL),
+	(4, 4, 'Carone', 'Serra', NULL),
+	(5, 5, 'Meridional', 'Aracruz', NULL),
+	(6, 6, 'Devens', 'Aracruz', NULL),
+	(7, 7, 'Carrefour', 'Serra', NULL),
+	(8, 8, 'Extrabom', 'Vila Velha', NULL),
+	(9, 9, 'Carrefour', 'Vitória', NULL),
+	(10, 10, 'Wallmart', 'Linhares', NULL);
