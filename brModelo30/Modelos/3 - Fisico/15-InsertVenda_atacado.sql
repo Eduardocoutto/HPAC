@@ -1,4 +1,4 @@
-INSERT INTO venda(ID_supe ,ID_prod ,valido , preco, quantidade)
+INSERT INTO venda_atacado(ID_supe ,ID_prod ,valido , preco, quantidade)
 VALUES  (1, 1, 1, 4.00,1),
 	(1, 2, 1, 5.00,1),
 	(1, 3, 1, 8.00,1),
