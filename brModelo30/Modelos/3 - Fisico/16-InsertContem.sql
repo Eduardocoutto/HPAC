@@ -1,5 +1,5 @@
 INSERT INTO contem (ID_list, ID_pord, quantidade)
-VALUES (1, 1, 5),
+VALUES  (1, 1, 5),
 	(1, 2,8),
 	(1, 3,20),
 	(1, 4, 15),
