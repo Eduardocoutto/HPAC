@@ -1,4 +1,4 @@
-INSERT INTO produto (ID_pord,nome ,tamanho ,marca ,tipoMedida,possui_ID_pord )
+INSERT INTO produto (ID_prod,nome ,tamanho ,marca ,tipoMedida,possui_ID_pord )
 VALUES (1, 'Banana', NULL, NULL, 'kg',1),
 	(2, 'Coca Cola', 300, NULL, 'ml',1),
 	(3, 'Coca Cola', 600, NULL, 'ml',1),
