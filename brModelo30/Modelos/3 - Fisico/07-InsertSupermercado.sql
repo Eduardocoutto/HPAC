@@ -1,4 +1,4 @@
-INSERT INTO supermercado(ID_supe ,ID_ende ,nome , unidade ,logo)
+INSERT INTO supermecado(ID_supe ,ID_ende ,nome , unidade ,logo)
 VALUES (1, 1, 'Devens', 'Serra', NULL),
 	(2, 2, 'Extrabom', 'Cariacica', NULL),
 	(3, 3, 'Wallmart', 'Vitória', NULL),
