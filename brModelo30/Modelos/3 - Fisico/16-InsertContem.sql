@@ -1,4 +1,4 @@
-INSERT INTO contem (ID_list, ID_pord, quantidade)
+INSERT INTO contem (ID_list, ID_prod, quantidade)
 VALUES  (1, 1, 5),
 	(1, 2,8),
 	(1, 3,20),
