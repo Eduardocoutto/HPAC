@@ -38,7 +38,7 @@ ID_supe INT PRIMARY KEY,
 ID_ende INT,
 nome VARCHAR(100),
 unidade VARCHAR(100),
-logo FILE NULL,
+logo INT NULL,
 FOREIGN KEY(ID_ende) REFERENCES endereço (ID_ende)
 );
 
@@ -74,6 +74,16 @@ dataLemb DATE,
 FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess)
 );
 
+CREATE TABLE IF NOT EXISTS produto (
+ID_prod INT PRIMARY KEY,
+nome VARCHAR(100),
+tamanho INT NULL,
+marca VARCHAR(100) NULL,
+validado INT,
+tipoMedida VARCHAR(10),
+possui_ID_prod INT NULL
+);
+
 CREATE TABLE IF NOT EXISTS avalia (
 nota INT,
 Atributo2 VARCHAR(250),
@@ -81,9 +91,8 @@ ID_supe INT,
 ID_prod INT,
 ID_pess INT,
 FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe),
-FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess)
-FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod)
-);
+FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess),
+FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod));
 
 CREATE TABLE IF NOT EXISTS venda (
 ID_supe INT,
@@ -109,14 +118,4 @@ ID_list INT,
 ID_prod INT,
 quantidade INT,
 PRIMARY KEY(ID_list, ID_prod)
-);
-
-CREATE TABLE IF NOT EXISTS produto (
-ID_prod INT PRIMARY KEY,
-nome VARCHAR(100),
-tamanho INT NULL,
-marca VARCHAR(100) NULL,
-validado INT,
-tipoMedida VARCHAR(10),
-possui_ID_prod INT NULL
 );
