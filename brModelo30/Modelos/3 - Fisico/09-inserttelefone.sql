@@ -1,4 +1,4 @@
-INSERT INTO telefone (telefone_PK, telefone)
+INSERT INTO telefone (ID_pess, telefone)
 VALUES (1, '+5521985556723'),
        (2, '+5527988857776'),
        (3, '+553133367957'),
