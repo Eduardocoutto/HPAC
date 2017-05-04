@@ -85,7 +85,7 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
         a) inclusão das instruções de criacão das estruturas DDL 
         (criação de tabelas, alterações, etc..)
         
-        
+![Modelo fisico](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_baseModelo1.sql?raw=true "Modelo fisico")
         
         Entrega até este ponto em: (Data a ser definida)
 
