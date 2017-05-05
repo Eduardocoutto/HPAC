@@ -85,13 +85,11 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
         a) inclusão das instruções de criacão das estruturas DDL 
         (criação de tabelas, alterações, etc..)<br/>
     
-[Modelo fisico link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_baseModelo1.sql?raw=true "Modelo fisico")
+[Modelo fisico link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_CriaTabelas.sql?raw=true "Modelo fisico")
         
         Entrega até este ponto em: (Data a ser definida)
 
 ###8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-
-[insert link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_InsertTabelas.sql?raw=true "insert")
 
 ####8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
@@ -102,13 +100,17 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
 
 
 ####8.2 INCLUSÃO DO SCRIPT DE INSERÇÃO DOS DADOS
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
+
+[insert link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_InsertTabelas.sql?raw=true "insert")<br/>
+        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico<br/>
         b) inclusão das instruções para execução de outros procedimentos necessários (caso existam)
 
 ####8.3 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
+ 
+[insert + create link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_Cria%2BInsertTabela.sql?raw=true "insert + crate")<br/> 
+        a) Junção dos scripts anteriores em um único script <br/>
+        (tabelas e estruturas de dados + dados a serem inseridos)<br/>
+        b) Criar um novo banco de dados para testar a restauracao <br/>
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         
         
