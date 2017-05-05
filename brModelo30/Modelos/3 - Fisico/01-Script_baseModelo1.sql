@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS venda (
 ID_supe INT,
 ID_prod INT,
 valido INT,
-preco FLOAT,
+preco MONEY,
 FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe),
 FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod)
 );
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS venda_atacado (
 ID_supe INT,
 ID_prod INT,
 valido INT,
-preco FLOAT,
+preco MONEY,
 quantidade INT,
 FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe),
 FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod)
