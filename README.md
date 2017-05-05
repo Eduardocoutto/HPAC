@@ -90,6 +90,9 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
         Entrega até este ponto em: (Data a ser definida)
 
 ###8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+
+[insert link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_InsertTabelas.sql?raw=true "insert")
+
 ####8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
         Referenciar todas as fontes referentes a :
