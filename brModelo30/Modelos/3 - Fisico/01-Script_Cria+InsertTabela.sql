@@ -7,14 +7,14 @@ CREATE TABLE IF NOT EXISTS estado (
 ID_esta INT PRIMARY KEY,
 ID_pais INT,
 nome VARCHAR(100),
-FOREIGN KEY(ID_pais) REFERENCES pais (ID_pais)
+FOREIGN KEY(ID_pais) REFERENCES pais (ID_pais) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS cidade (
 ID_cida INT PRIMARY KEY,
 ID_esta INT,
 nome VARCHAR(100),
-FOREIGN KEY(ID_esta) REFERENCES estado (ID_esta)
+FOREIGN KEY(ID_esta) REFERENCES estado (ID_esta) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS avaliacao_sistema (
@@ -22,7 +22,7 @@ nota INT,
 comentario VARCHAR(250)
 );
 
-CREATE TABLE IF NOT EXISTS endereço (
+CREATE TABLE IF NOT EXISTS endereco (
 ID_ende INT PRIMARY KEY,
 ID_cida INT,
 bairro VARCHAR(100),
@@ -30,16 +30,16 @@ cep CHAR(8),
 logradouro VARCHAR(100),
 numero INTEGER,
 complemento VARCHAR(100),
-FOREIGN KEY(ID_cida) REFERENCES cidade (ID_cida)
+FOREIGN KEY(ID_cida) REFERENCES cidade (ID_cida) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS supermecado (
+CREATE TABLE IF NOT EXISTS supermercado (
 ID_supe INT PRIMARY KEY,
 ID_ende INT,
 nome VARCHAR(100),
 unidade VARCHAR(100),
 logo INT NULL,
-FOREIGN KEY(ID_ende) REFERENCES endereço (ID_ende)
+FOREIGN KEY(ID_ende) REFERENCES endereco (ID_ende) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS pessoa (
@@ -49,19 +49,19 @@ nome VARCHAR(100),
 login VARCHAR(50),
 senha VARCHAR(50),
 nivel INT,
-FOREIGN KEY(ID_ende) REFERENCES endereço (ID_ende)
+FOREIGN KEY(ID_ende) REFERENCES endereco (ID_ende) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS telefone (
 ID_pess INT,
 telefone CHAR(14),
-FOREIGN KEY (ID_pess) REFERENCES pessoa (ID_pess)
+FOREIGN KEY (ID_pess) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS email (
 ID_pess_FK INT,
 email VARCHAR(150),
-FOREIGN KEY(ID_pess_FK) REFERENCES pessoa (ID_pess)
+FOREIGN KEY(ID_pess_FK) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS lista_de_compras (
@@ -71,7 +71,7 @@ nome VARCHAR(100),
 dataCria DATE,
 dataFim DATE,
 dataLemb DATE,
-FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess)
+FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS produto (
@@ -87,20 +87,21 @@ possui_ID_prod INT NULL
 CREATE TABLE IF NOT EXISTS avalia (
 nota INT,
 Atributo2 VARCHAR(250),
-ID_supe INT,
-ID_prod INT,
-ID_pess INT,
-FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe),
-FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess),
-FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod));
+ID_supe INT NULL,
+ID_prod INT NULL,
+ID_pess INT NULL,
+FOREIGN KEY(ID_supe) REFERENCES supermercado (ID_supe) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE,
+FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 CREATE TABLE IF NOT EXISTS venda (
 ID_supe INT,
 ID_prod INT,
 valido INT,
 preco MONEY,
-FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe),
-FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod)
+FOREIGN KEY(ID_supe) REFERENCES supermercado (ID_supe) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS venda_atacado (
@@ -109,15 +110,17 @@ ID_prod INT,
 valido INT,
 preco MONEY,
 quantidade INT,
-FOREIGN KEY(ID_supe) REFERENCES supermecado (ID_supe),
-FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod)
+FOREIGN KEY(ID_supe) REFERENCES supermercado (ID_supe) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS contem (
 ID_list INT,
 ID_prod INT,
 quantidade INT,
-PRIMARY KEY(ID_list, ID_prod)
+PRIMARY KEY(ID_list, ID_prod),
+FOREIGN KEY(ID_list) REFERENCES lista_de_compras (ID_list) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 INSERT INTO pais (ID_pais, nome)
@@ -161,12 +164,17 @@ VALUES  (1,  1, 'Serra'           ),
         (11, 6, 'Rio de Janeiro'  ),
         (12, 6, 'Niterói'         );
 		
-INSERT INTO endereço (id_ende, ID_cida, bairro, cep, logradouro, numero, complemento)
+INSERT INTO endereco (id_ende, ID_cida, bairro, cep, logradouro, numero, complemento)
 VALUES  (1, 1, 'Manguinhos',  	    '29123123', 'Rua dos estudantes',  661, 'Ifes Serra'),
         (2, 1, 'Laranjeiras', 	    '29165000', 'Av Central', 	       152, 'Comercio'	),
         (3, 2, 'Goiabeiras',  	    '29165001', 'Av Fernando Ferrari', 122, 'Nenhum'	),
         (4, 3, 'Jardim Marilandia', '29179450', 'Av Teste', 	       14,  'Comercio'	),
-        (5, 1, 'Barcelona', 	    '29666200', 'Rua Aquario Santos',  433, 'Nope' 	);
+        (5, 1, 'Barcelona', 	    '29666200', 'Rua Aquario Santos',  433, 'Nope' 	),
+        (6, 1, 'Feu Rosa',          '29165666', 'Rua teste',           11,  'Nenhum'),
+        (7, 2, 'São Pedro',         '29887887', 'Rua Absurda',         12,  'Ifes Vitoria'),
+        (8, 2, 'São Torquato',      '29665123', 'Rua Terminal',        22,  'Certurb'),
+        (9, 1, 'Dombosco',          '29123332', 'Rua Juraci',          212,  'Nehum'),
+        (10,1, 'Colina de Laranjerias','29165082', 'Rua Herman Stern', 371, 'Condominio');
 		
 INSERT INTO avaliacao_sistema (nota , comentario)
 VALUES  (1, 'Banana podre'   ),
@@ -175,17 +183,17 @@ VALUES  (1, 'Banana podre'   ),
 	(7, 'Dá pra melhorar'),
 	(8, 'Funcionou'	     );
 	
-INSERT INTO supermecado(ID_supe ,ID_ende ,nome , unidade ,logo)
+INSERT INTO supermercado(ID_supe ,ID_ende ,nome , unidade ,logo)
 VALUES  (1,  1, 'Devens',     'Serra',      NULL),
 	(2,  2, 'Extrabom',   'Cariacica',  NULL),
 	(3,  3, 'Wallmart',   'Vitória',    NULL),
 	(4,  4, 'Carone',     'Serra', 	    NULL),
 	(5,  5, 'Meridional', 'Aracruz',    NULL),
-	(6,  1, 'Devens',     'Aracruz',    NULL),
-	(7,  2, 'Carrefour',  'Serra', 	    NULL),
-	(8,  3, 'Extrabom',   'Vila Velha', NULL),
-	(9,  4, 'Carrefour',  'Vitória',    NULL),
-	(10, 5, 'Wallmart',   'Linhares',   NULL);
+	(6,  6, 'Devens',     'Aracruz',    NULL),
+	(7,  7, 'Carrefour',  'Serra', 	    NULL),
+	(8,  8, 'Extrabom',   'Vila Velha', NULL),
+	(9,  9, 'Carrefour',  'Vitória',    NULL),
+	(10, 10, 'Wallmart',   'Linhares',   NULL);
 
 INSERT INTO pessoa(ID_pess, ID_ende, nome, login, senha, nivel)
 VALUES (01, 1, 'Antonio',    'casablanca', '######', 0),
@@ -214,16 +222,16 @@ VALUES (5, 'novinha123@cestadecompras.com.br'),
        (7, 'pink@cestadecompras.com.br'      );
 	   
 INSERT INTO lista_de_compras (ID_list, ID_pess, nome, dataCria, dataFim, dataLemb)
-VALUES (01, 1, 'churas turma',          '01/04/2017', '25/12/2017', '02/09/2017'),
-       (02, 7, 'churas turma',          '18/03/2017', '22/05/2017', '22/05/2017'),
-       (03, 5, 'compras casa',          '02/02/2017', '17/02/2017', '13/02/2017'),
-       (04, 1, 'idiota do chefe mando', '01/01/2017', '31/12/2017', '01/12/2017'),
-       (05, 4, 'encontro beneficente',  '12/10/2017', '30/10/2017', '09/10/2017'),
-       (06, 1, 'frutas',                '10/04/2017', '11/04/2017', '11/04/2017'),
-       (07, 5, 'pescaria',              '12/04/2017', '12/05/2017', '10/05/2017'),
-       (08, 2, 'natal',                 '01/04/2017', '25/12/2017', '02/09/2017'),
-       (09, 4, 'churas antonio',        '15/05/2017', '17/08/2017', '09/08/2017'),
-       (10, 4, 'churas familia',        '13/01/2017', '28/02/2017', '23/02/2017');
+VALUES (01, 1, 'churas turma',          '2017/04/01', '2017/12/25', '2017/09/02'),
+       (02, 7, 'churas turma',          '2017/03/18', '2017/05/22', '2017/05/22'),
+       (03, 5, 'compras casa',          '2017/02/02', '2017/02/17', '2017/02/13'),
+       (04, 1, 'idiota do chefe mando', '2017/01/01', '2017/12/31', '2017/12/01'),
+       (05, 4, 'encontro beneficente',  '2017/10/12', '2017/10/30', '2017/10/09'),
+       (06, 1, 'frutas',                '2017/04/10', '2017/04/11', '2017/04/11'),
+       (07, 5, 'pescaria',              '2017/04/12', '2017/05/12', '2017/05/10'),
+       (08, 2, 'natal',                 '2017/04/01', '2017/12/25', '2017/09/02'),
+       (09, 4, 'churas antonio',        '2017/05/15', '2017/08/17', '2017/08/09'),
+       (10, 4, 'churas familia',        '2017/01/13', '2017/02/28', '2017/02/23');
 	   
 INSERT INTO produto (ID_prod,nome ,tamanho ,marca ,tipoMedida,possui_ID_prod )
 VALUES  (1,  'Banana', 		      NULL, NULL,        'kg',   NULL),
