@@ -64,11 +64,11 @@ VALUES  (1,  1, 'Devens',     'Serra',      NULL),
 	(3,  3, 'Wallmart',   'Vitória',    NULL),
 	(4,  4, 'Carone',     'Serra', 	    NULL),
 	(5,  5, 'Meridional', 'Aracruz',    NULL),
-	(6,  1, 'Devens',     'Aracruz',    NULL),
-	(7,  2, 'Carrefour',  'Serra', 	    NULL),
-	(8,  3, 'Extrabom',   'Vila Velha', NULL),
-	(9,  4, 'Carrefour',  'Vitória',    NULL),
-	(10, 5, 'Wallmart',   'Linhares',   NULL);
+	(6,  6, 'Devens',     'Aracruz',    NULL),
+	(7,  7, 'Carrefour',  'Serra', 	    NULL),
+	(8,  8, 'Extrabom',   'Vila Velha', NULL),
+	(9,  9, 'Carrefour',  'Vitória',    NULL),
+	(10, 10, 'Wallmart',   'Linhares',   NULL);
 
 INSERT INTO pessoa(ID_pess, ID_ende, nome, login, senha, nivel)
 VALUES (01, 1, 'Antonio',    'casablanca', '######', 0),
