@@ -53,7 +53,7 @@ VALUES  (1,  1, 'Manguinhos'           ),
         (11, 6, 'Marilândia'  ),
         (12, 6, 'Coqueiral de itapuã');
 		
-INSERT INTO endereco (id_ende, ID_cida, cep, logradouro, numero, complemento)
+INSERT INTO endereco (id_ende, ID_bair, cep, logradouro, numero, complemento)
 VALUES  (1, 1,'29123123', 'Rua dos estudantes',  661, 'Ifes Serra'),
         (2, 1, 	    '29165000', 'Av Central', 	       152, 'Comercio'	),
         (3, 2,  	    '29165001', 'Av Fernando Ferrari', 122, 'Nenhum'	),
