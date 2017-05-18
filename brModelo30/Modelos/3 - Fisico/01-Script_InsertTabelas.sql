@@ -38,18 +38,32 @@ VALUES  (1,  1, 'Serra'           ),
         (10, 2, 'Campinas'        ),
         (11, 6, 'Rio de Janeiro'  ),
         (12, 6, 'Niterói'         );
+
+INSERT INTO bairro (ID_bair,ID_cida,nome)
+VALUES  (1,  1, 'Manguinhos'           ),
+	(2,  1, 'Laranjeiras'         ),
+        (3,  1, 'Goiabeiras'      ),
+        (4,  1, 'Jardim Marilandia'       ),
+        (5,  1, 'Barcelona'       ),
+        (6,  1, 'Feu Rosa'  ),
+        (7,  7, 'São Pedro'        ),
+        (8,  7, 'São Torquato'),
+	(9,  2, 'Dombosco'       ),
+        (10, 2, 'Colina de Laranjerias'        ),
+        (11, 6, 'Marilândia'  ),
+        (12, 6, 'Coqueiral de itapuã');
 		
-INSERT INTO endereco (id_ende, ID_cida, bairro, cep, logradouro, numero, complemento)
-VALUES  (1, 1, 'Manguinhos',  	    '29123123', 'Rua dos estudantes',  661, 'Ifes Serra'),
-        (2, 1, 'Laranjeiras', 	    '29165000', 'Av Central', 	       152, 'Comercio'	),
-        (3, 2, 'Goiabeiras',  	    '29165001', 'Av Fernando Ferrari', 122, 'Nenhum'	),
-        (4, 3, 'Jardim Marilandia', '29179450', 'Av Teste', 	       14,  'Comercio'	),
-        (5, 1, 'Barcelona', 	    '29666200', 'Rua Aquario Santos',  433, 'Nope' 	),
-        (6, 1, 'Feu Rosa',          '29165666', 'Rua teste',           11,  'Nenhum'),
-        (7, 2, 'São Pedro',         '29887887', 'Rua Absurda',         12,  'Ifes Vitoria'),
-        (8, 2, 'São Torquato',      '29665123', 'Rua Terminal',        22,  'Certurb'),
-        (9, 1, 'Dombosco',          '29123332', 'Rua Juraci',          212,  'Nehum'),
-        (10,1, 'Colina de Laranjerias','29165082', 'Rua Herman Stern', 371, 'Condominio');
+INSERT INTO endereco (id_ende, ID_cida, cep, logradouro, numero, complemento)
+VALUES  (1, 1,'29123123', 'Rua dos estudantes',  661, 'Ifes Serra'),
+        (2, 1, 	    '29165000', 'Av Central', 	       152, 'Comercio'	),
+        (3, 2,  	    '29165001', 'Av Fernando Ferrari', 122, 'Nenhum'	),
+        (4, 3, '29179450', 'Av Teste', 	       14,  'Comercio'	),
+        (5, 1, 	    '29666200', 'Rua Aquario Santos',  433, 'Nope' 	),
+        (6, 1,          '29165666', 'Rua teste',           11,  'Nenhum'),
+        (7, 2,         '29887887', 'Rua Absurda',         12,  'Ifes Vitoria'),
+        (8, 2,      '29665123', 'Rua Terminal',        22,  'Certurb'),
+        (9, 1,          '29123332', 'Rua Juraci',          212,  'Nehum'),
+        (10,1,'29165082', 'Rua Herman Stern', 371, 'Condominio');
 		
 INSERT INTO avaliacao_sistema (nota , comentario)
 VALUES  (1, 'Banana podre'   ),
