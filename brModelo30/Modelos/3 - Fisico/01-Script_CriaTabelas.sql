@@ -55,6 +55,7 @@ nome VARCHAR(100),
 login VARCHAR(50),
 senha VARCHAR(50),
 nivel INT,
+data_nas DATE,
 FOREIGN KEY(ID_ende) REFERENCES endereco (ID_ende) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
