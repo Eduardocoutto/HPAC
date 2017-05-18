@@ -95,20 +95,30 @@ VALUES (01, 1, 'Antonio',    'casablanca', '######', 0),
        (08, 1, 'Robeerto',   'matador',    '######', 3),
        (09, 1, 'Antonio',    'antonio',    '######', 0),
        (10, 1, 'Lucas',      'lulu',       '######', 1);
-	   
-INSERT INTO telefone (ID_pess, telefone)
+       
+INSERT INTO contato (ID_pess, ID_tcon, descricao)
+VALUES  (1,  1, 'Telefone'),
+	(2,  2, 'Telefone'),
+	(3,  3, 'Telefone'),
+	(4,  4, 'Telefone'),
+	(5,  5, 'Telefone'),
+	(6,  6, 'Email'),
+	(7,  7, 'Email'),
+	(8,  8, 'Email'),
+	(9,  9, 'Email'),
+	(10, 10, 'Email');
+	
+INSERT INTO tipo_contato (ID_tcon, tipo)
 VALUES (1, '+5521985556723'),
        (2, '+5527988857776'),
        (3, '+553133367957' ),
        (4, '+552733377722' ),
        (5, '+5529804630127');
-	   
-INSERT INTO email (ID_pess_FK, email)
-VALUES (5, 'novinha123@cestadecompras.com.br'),
-       (6, 'asdfg@cestadecompras.com.br'     ),
-       (1, 'casablanca@cestadecompras.com.br'),
-       (3, 'Jubisk@cestadecompras.com.br'    ),
-       (7, 'pink@cestadecompras.com.br'      );
+       (6, 'novinha123@cestadecompras.com.br'),
+       (7, 'asdfg@cestadecompras.com.br'     ),
+       (8, 'casablanca@cestadecompras.com.br'),
+       (9, 'Jubisk@cestadecompras.com.br'    ),
+       (10, 'pink@cestadecompras.com.br'      );
 	   
 INSERT INTO lista_de_compras (ID_list, ID_pess, nome, dataCria, dataFim, dataLemb)
 VALUES (01, 1, 'churas turma',          '2017/04/01', '2017/12/25', '2017/09/02'),
