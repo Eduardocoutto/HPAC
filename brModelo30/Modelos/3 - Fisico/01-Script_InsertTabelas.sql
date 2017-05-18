@@ -84,17 +84,17 @@ VALUES  (1,  1, 'Devens',     'Serra',      NULL),
 	(9,  9, 'Carrefour',  'Vitória',    NULL),
 	(10, 10, 'Wallmart',   'Linhares',   NULL);
 
-INSERT INTO pessoa(ID_pess, ID_ende, nome, login, senha, nivel)
-VALUES (01, 1, 'Antonio',    'casablanca', '######', 0),
-       (02, 1, 'Guilherme',  'Gigi',       '######', 0),
-       (03, 1, 'Julieta',    'Jubisk',     '######', 0),
-       (04, 1, 'Bartolomeu', 'barto',      '######', 2),
-       (05, 1, 'Erica',      'novinha123', '######', 4),
-       (06, 1, 'Beatriz',    'asdfg',      '######', 5),
-       (07, 1, 'Milena',     'pink',       '######', 0),
-       (08, 1, 'Robeerto',   'matador',    '######', 3),
-       (09, 1, 'Antonio',    'antonio',    '######', 0),
-       (10, 1, 'Lucas',      'lulu',       '######', 1);
+INSERT INTO pessoa(ID_pess, ID_ende, nome, login, senha, nivel, data_nas)
+VALUES (01, 1, 'Antonio',    'casablanca', '######', 0, '1998/02/01'),
+       (02, 1, 'Guilherme',  'Gigi',       '######', 0, '1991/04/07'),
+       (03, 1, 'Julieta',    'Jubisk',     '######', 0, '1995/07/21'),
+       (04, 1, 'Bartolomeu', 'barto',      '######', 2, '1992/10/11'),
+       (05, 1, 'Erica',      'novinha123', '######', 4, '1991/10/01'),
+       (06, 1, 'Beatriz',    'asdfg',      '######', 5, '1990/09/24'),
+       (07, 1, 'Milena',     'pink',       '######', 0, '1993/12/31'),
+       (08, 1, 'Robeerto',   'matador',    '######', 3, '1994/10/10'),
+       (09, 1, 'Antonio',    'antonio',    '######', 0, '1996/12/07'),
+       (10, 1, 'Lucas',      'lulu',       '######', 1, '1999/01/30');
        
 INSERT INTO tipo_contato (ID_tcon, tipo)
 VALUES (1, '+5521985556723'),
