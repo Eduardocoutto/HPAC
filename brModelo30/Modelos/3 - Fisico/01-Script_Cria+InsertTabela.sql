@@ -1,3 +1,16 @@
+-- Adicionado em 30/05/17
+CREATE TABLE IF NOT EXISTS tipo_medida(
+ID_tmed INT PRIMARY KEY,
+nome VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS marca(
+ID_marc INT PRIMARY KEY,
+nome VARCHAR
+);
+-- Fim
+
+
 CREATE TABLE IF NOT EXISTS pais (
 ID_pais INT PRIMARY KEY,
 nome VARCHAR(100)
@@ -17,6 +30,13 @@ nome VARCHAR(100),
 FOREIGN KEY(ID_esta) REFERENCES estado (ID_esta) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS bairro (
+ID_bair INT PRIMARY KEY,
+ID_cida INT,
+nome VARCHAR(100),
+FOREIGN KEY(ID_cida) REFERENCES cidade (ID_cida) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS avaliacao_sistema (
 nota INT,
 comentario VARCHAR(250)
@@ -24,13 +44,12 @@ comentario VARCHAR(250)
 
 CREATE TABLE IF NOT EXISTS endereco (
 ID_ende INT PRIMARY KEY,
-ID_cida INT,
-bairro VARCHAR(100),
+ID_bair INT,
 cep CHAR(8),
 logradouro VARCHAR(100),
 numero INTEGER,
 complemento VARCHAR(100),
-FOREIGN KEY(ID_cida) REFERENCES cidade (ID_cida) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
+FOREIGN KEY(ID_bair) REFERENCES bairro (ID_bair) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS supermercado (
@@ -49,20 +68,24 @@ nome VARCHAR(100),
 login VARCHAR(50),
 senha VARCHAR(50),
 nivel INT,
+data_nas DATE,
 FOREIGN KEY(ID_ende) REFERENCES endereco (ID_ende) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS telefone (
-ID_pess INT,
-telefone CHAR(14),
-FOREIGN KEY (ID_pess) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE IF NOT EXISTS tipo_contato (
+ID_tcon INT PRIMARY KEY,
+tipo VARCHAR(50)
 );
 
-CREATE TABLE IF NOT EXISTS email (
-ID_pess_FK INT,
-email VARCHAR(150),
-FOREIGN KEY(ID_pess_FK) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE
+
+CREATE TABLE IF NOT EXISTS contato (
+ID_pess INT,
+ID_tcon INT,
+descricao VARCHAR(70),
+FOREIGN KEY (ID_pess) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (ID_tcon) REFERENCES tipo_contato (ID_tcon) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
 
 CREATE TABLE IF NOT EXISTS lista_de_compras (
 ID_list INT PRIMARY KEY,
@@ -76,11 +99,14 @@ FOREIGN KEY(ID_pess) REFERENCES pessoa (ID_pess) MATCH FULL ON DELETE RESTRICT O
 
 CREATE TABLE IF NOT EXISTS produto (
 ID_prod INT PRIMARY KEY,
+ID_tmed INT,
+ID_marc INT,
 nome VARCHAR(100),
 tamanho INT NULL,
-marca VARCHAR(100) NULL,
 validado INT,
-tipoMedida VARCHAR(10),
+possui_ID_prod INT NULL,
+FOREIGN KEY(ID_tmed) REFERENCES tipo_medida (ID_tmed) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE,
+FOREIGN KEY(ID_marc) REFERENCES marca (ID_marc) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS avalia (
@@ -122,6 +148,31 @@ FOREIGN KEY(ID_list) REFERENCES lista_de_compras (ID_list) MATCH FULL ON DELETE 
 FOREIGN KEY(ID_prod) REFERENCES produto (ID_prod) MATCH FULL ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
+INSERT INTO marca (ID_marc, nome)
+VALUES  (1,  'Nenhuma'),
+		(2,  'Nestle'),
+		(3,  'Sepé'),
+		(4,  'Coca Cola'),
+		(5,  'Unilever'),
+		(6,  'Seara'),
+		(7,  'Quero'),
+		(8,  'PEPSI'),
+		(9,  'SAMSUMG'),
+		(10, 'Gillette');
+
+INSERT INTO tipo_medida (ID_tmed, nome)
+VALUES  (1,  'KG'),
+		(2,  'Litro'),
+		(3,  'Grama'),
+		(4,  'UNIDADE'),
+		(5,  'PACOTE'),
+		(6,  'Seara'),
+		(7,  'Watts'),
+		(8,  'ML'),
+		(9,  'CM'),
+		(10, 'Gigas');
+		
+
 INSERT INTO pais (ID_pais, nome)
 VALUES  (1,  'Brasil'        ),
         (2,  'Estados Unidos'),
@@ -144,7 +195,7 @@ VALUES  (1, 1,  'Espirito Santo'    ),
         (1, 6,  'Rio de Janeiro'    ),
         (1, 7,  'Bahia'             ),
         (1, 8,  'Rio de Janeiro'    ),
-	(2, 9,  'Texas'             ),
+		(2, 9,  'Texas'             ),
         (2, 10, 'Califórnia'        ),
         (2, 11, 'Flórida'           ),
         (2, 12, 'Alasca'            );
@@ -162,18 +213,32 @@ VALUES  (1,  1, 'Serra'           ),
         (10, 2, 'Campinas'        ),
         (11, 6, 'Rio de Janeiro'  ),
         (12, 6, 'Niterói'         );
+
+INSERT INTO bairro (ID_bair,ID_cida,nome)
+VALUES  (1,  1, 'Manguinhos'           ),
+	(2,  1, 'Laranjeiras'         ),
+        (3,  1, 'Goiabeiras'      ),
+        (4,  1, 'Jardim Marilandia'       ),
+        (5,  1, 'Barcelona'       ),
+        (6,  1, 'Feu Rosa'  ),
+        (7,  7, 'São Pedro'        ),
+        (8,  7, 'São Torquato'),
+	(9,  2, 'Dombosco'       ),
+        (10, 2, 'Colina de Laranjerias'        ),
+        (11, 6, 'Marilândia'  ),
+        (12, 6, 'Coqueiral de itapuã');
 		
-INSERT INTO endereco (id_ende, ID_cida, bairro, cep, logradouro, numero, complemento)
-VALUES  (1, 1, 'Manguinhos',  	    '29123123', 'Rua dos estudantes',  661, 'Ifes Serra'),
-        (2, 1, 'Laranjeiras', 	    '29165000', 'Av Central', 	       152, 'Comercio'	),
-        (3, 2, 'Goiabeiras',  	    '29165001', 'Av Fernando Ferrari', 122, 'Nenhum'	),
-        (4, 3, 'Jardim Marilandia', '29179450', 'Av Teste', 	       14,  'Comercio'	),
-        (5, 1, 'Barcelona', 	    '29666200', 'Rua Aquario Santos',  433, 'Nope' 	),
-        (6, 1, 'Feu Rosa',          '29165666', 'Rua teste',           11,  'Nenhum'),
-        (7, 2, 'São Pedro',         '29887887', 'Rua Absurda',         12,  'Ifes Vitoria'),
-        (8, 2, 'São Torquato',      '29665123', 'Rua Terminal',        22,  'Certurb'),
-        (9, 1, 'Dombosco',          '29123332', 'Rua Juraci',          212,  'Nehum'),
-        (10,1, 'Colina de Laranjerias','29165082', 'Rua Herman Stern', 371, 'Condominio');
+INSERT INTO endereco (id_ende, ID_bair, cep, logradouro, numero, complemento)
+VALUES  (1, 1,'29123123', 'Rua dos estudantes',  661, 'Ifes Serra'),
+        (2, 1, 	    '29165000', 'Av Central', 	       152, 'Comercio'	),
+        (3, 2,  	    '29165001', 'Av Fernando Ferrari', 122, 'Nenhum'	),
+        (4, 3, '29179450', 'Av Teste', 	       14,  'Comercio'	),
+        (5, 1, 	    '29666200', 'Rua Aquario Santos',  433, 'Nope' 	),
+        (6, 1,          '29165666', 'Rua teste',           11,  'Nenhum'),
+        (7, 2,         '29887887', 'Rua Absurda',         12,  'Ifes Vitoria'),
+        (8, 2,      '29665123', 'Rua Terminal',        22,  'Certurb'),
+        (9, 1,          '29123332', 'Rua Juraci',          212,  'Nehum'),
+        (10,1,'29165082', 'Rua Herman Stern', 371, 'Condominio');
 		
 INSERT INTO avaliacao_sistema (nota , comentario)
 VALUES  (1, 'Banana podre'   ),
@@ -194,31 +259,42 @@ VALUES  (1,  1, 'Devens',     'Serra',      NULL),
 	(9,  9, 'Carrefour',  'Vitória',    NULL),
 	(10, 10, 'Wallmart',   'Linhares',   NULL);
 
-INSERT INTO pessoa(ID_pess, ID_ende, nome, login, senha, nivel)
-VALUES (01, 1, 'Antonio',    'casablanca', '######', 0),
-       (02, 1, 'Guilherme',  'Gigi',       '######', 0),
-       (03, 1, 'Julieta',    'Jubisk',     '######', 0),
-       (04, 1, 'Bartolomeu', 'barto',      '######', 2),
-       (05, 1, 'Erica',      'novinha123', '######', 4),
-       (06, 1, 'Beatriz',    'asdfg',      '######', 5),
-       (07, 1, 'Milena',     'pink',       '######', 0),
-       (08, 1, 'Robeerto',   'matador',    '######', 3),
-       (09, 1, 'Antonio',    'antonio',    '######', 0),
-       (10, 1, 'Lucas',      'lulu',       '######', 1);
-	   
-INSERT INTO telefone (ID_pess, telefone)
+INSERT INTO pessoa(ID_pess, ID_ende, nome, login, senha, nivel, data_nas)
+VALUES (01, 1, 'Antonio',    'casablanca', '######', 0, '1998/02/01'),
+       (02, 1, 'Guilherme',  'Gigi',       '######', 0, '1991/04/07'),
+       (03, 1, 'Julieta',    'Jubisk',     '######', 0, '1995/07/21'),
+       (04, 1, 'Bartolomeu', 'barto',      '######', 2, '1992/10/11'),
+       (05, 1, 'Erica',      'novinha123', '######', 4, '1991/10/01'),
+       (06, 1, 'Beatriz',    'asdfg',      '######', 5, '1990/09/24'),
+       (07, 1, 'Milena',     'pink',       '######', 0, '1993/12/31'),
+       (08, 1, 'Robeerto',   'matador',    '######', 3, '1994/10/10'),
+       (09, 1, 'Antonio',    'antonio',    '######', 0, '1996/12/07'),
+       (10, 1, 'Lucas',      'lulu',       '######', 1, '1999/01/30');
+       
+INSERT INTO tipo_contato (ID_tcon, tipo)
 VALUES (1, '+5521985556723'),
        (2, '+5527988857776'),
        (3, '+553133367957' ),
        (4, '+552733377722' ),
-       (5, '+5529804630127');
-	   
-INSERT INTO email (ID_pess_FK, email)
-VALUES (5, 'novinha123@cestadecompras.com.br'),
-       (6, 'asdfg@cestadecompras.com.br'     ),
-       (1, 'casablanca@cestadecompras.com.br'),
-       (3, 'Jubisk@cestadecompras.com.br'    ),
-       (7, 'pink@cestadecompras.com.br'      );
+       (5, '+5529804630127'),
+       (6, 'novinha123@cestadecompras.com.br'),
+       (7, 'asdfg@cestadecompras.com.br'     ),
+       (8, 'casablanca@cestadecompras.com.br'),
+       (9, 'Jubisk@cestadecompras.com.br'    ),
+       (10, 'pink@cestadecompras.com.br'      );  
+       
+INSERT INTO contato (ID_pess, ID_tcon, descricao)
+VALUES  (1,  1, 'Telefone'),
+	(2,  2, 'Telefone'),
+	(3,  3, 'Telefone'),
+	(4,  4, 'Telefone'),
+	(5,  5, 'Telefone'),
+	(6,  6, 'Email'),
+	(7,  7, 'Email'),
+	(8,  8, 'Email'),
+	(9,  9, 'Email'),
+	(10, 10, 'Email');
+	
 	   
 INSERT INTO lista_de_compras (ID_list, ID_pess, nome, dataCria, dataFim, dataLemb)
 VALUES (01, 1, 'churas turma',          '2017/04/01', '2017/12/25', '2017/09/02'),
@@ -232,27 +308,30 @@ VALUES (01, 1, 'churas turma',          '2017/04/01', '2017/12/25', '2017/09/02'
        (09, 4, 'churas antonio',        '2017/05/15', '2017/08/17', '2017/08/09'),
        (10, 4, 'churas familia',        '2017/01/13', '2017/02/28', '2017/02/23');
 	   
-INSERT INTO produto (ID_prod,nome ,tamanho ,marca ,tipoMedida)
-VALUES  (1,  'Banana', 		      NULL, NULL,        'kg'),
-	(2,  'Coca Cola',	      300,  NULL,        'ml'),
-	(3,  'Coca Cola',	      600,  NULL,        'ml'),
-	(4,  'Coca Cola',	      2,    NUll,        'l'),
-	(5,  'Arroz', 		      1,    'sepó',      'kg'),
-	(6,  'Feijao', 		      2,    'sabugo',    'kg'),
-	(7,  'Milho',  		      1,    'sadiga',    'kg'),
-	(8,  'Escova de dente',       10,   'Lonis',     'cm'),
-	(9,  'Copos de plastico',     300,  'Nanis',     'ml'),
-	(10, 'Pendrive', 	      8,    'Kingspon',  'gb'),
-	(11, 'Barra de chocolate',    200,  'maroto',    'g'),
-	(12, 'Lãmpada LED',           6,    'lapda',     'watt'),
-	(13, 'Lâmpada Incandescente', 40,   'lapda',     'watt'),
-	(14, 'Trigo',                 1,    'felizardo', 'kg'),
-	(15, 'Biscoito recheado',     100,  'Prakinas',  'g'),
-	(16, 'Batata chips',          75,   'Muffles',   'g'),
-	(17, 'Detergente',            500,  'Limol',     'ml'),
-	(18, 'Par de Chinelos',       NULL, 'Cavaibana', NULL),
-	(19, 'Carne picanha',         1,     NULL,       'kg'),
-	(20, 'Pacote de lenço',       NULL, 'glinex',    NULL);
+	  
+
+--Alterado em 30/05/17	   
+INSERT INTO produto (ID_prod, nome, ID_tmed, ID_marc ,tamanho ,possui_ID_prod )
+VALUES  (1,  'Banana',            1,  1,   NULL,      NULL),
+	(2,  'Coca Cola',             8,  4,    300,      NULL),
+	(3,  'Coca Cola',             8,  4,	600,      NULL),
+	(4,  'Coca Cola',             2,  4,	  2,      NULL),
+	(5,  'Arroz',                 2,  3,	  1,      NULL),
+	(6,  'Feijao',                2,  3, 	  2,      NULL),
+	(7,  'Milho',  	              2,  6,      1,      NULL),
+	(8,  'Escova de dente',       9,  5,     10,      NULL),
+	(9,  'Copos de plastico',     8,  5,    300,      NULL),
+	(10, 'Pendrive', 	          8,  9,     16,      NULL),
+	(11, 'Barra de chocolate',    3,  2,    200,      NULL),
+	(12, 'Lãmpada LED',           7,  9,      6,      NULL),
+	(13, 'Lâmpada Incandescente', 7,  9,     40,      NULL),
+	(14, 'Trigo',                 1,  3,      1,      NULL),
+	(15, 'Biscoito recheado',     3,  2,    100,      NULL),
+	(16, 'Batata chips',          3,  7,     75,      NULL),
+	(17, 'Detergente',            8,  5,    500,      NULL),
+	(18, 'Par de Chinelos',       4,  1,   NULL,      NULL),
+	(19, 'Carne picanha',         1,  6,   NULL,      NULL),
+	(20, 'Pacote de lenço',       5,  1,   NULL,      NULL);
 		
 INSERT INTO avalia(nota , Atributo2 ,ID_supe, ID_prod , ID_pess)
 VALUES  (1, 'Banana podre',    1, 1, 1),
