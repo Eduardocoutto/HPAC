@@ -1,3 +1,28 @@
+INSERT INTO marca (ID_marc, nome)
+VALUES  (1,  'Nenhuma'),
+		(2,  'Nestle'),
+		(3,  'Sepé'),
+		(4,  'Coca Cola'),
+		(5,  'Unilever'),
+		(6,  'Seara'),
+		(7,  'Quero'),
+		(8,  'PEPSI'),
+		(9,  'SAMSUMG'),
+		(10, 'Gillette');
+
+INSERT INTO tipo_medida (ID_tmed, nome)
+VALUES  (1,  'KG'),
+		(2,  'Litro'),
+		(3,  'Grama'),
+		(4,  'UNIDADE'),
+		(5,  'PACOTE'),
+		(6,  'Seara'),
+		(7,  'Watts'),
+		(8,  'ML'),
+		(9,  'CM'),
+		(10, 'Gigas');
+		
+
 INSERT INTO pais (ID_pais, nome)
 VALUES  (1,  'Brasil'        ),
         (2,  'Estados Unidos'),
@@ -20,7 +45,7 @@ VALUES  (1, 1,  'Espirito Santo'    ),
         (1, 6,  'Rio de Janeiro'    ),
         (1, 7,  'Bahia'             ),
         (1, 8,  'Rio de Janeiro'    ),
-	(2, 9,  'Texas'             ),
+		(2, 9,  'Texas'             ),
         (2, 10, 'Califórnia'        ),
         (2, 11, 'Flórida'           ),
         (2, 12, 'Alasca'            );
@@ -133,27 +158,30 @@ VALUES (01, 1, 'churas turma',          '2017/04/01', '2017/12/25', '2017/09/02'
        (09, 4, 'churas antonio',        '2017/05/15', '2017/08/17', '2017/08/09'),
        (10, 4, 'churas familia',        '2017/01/13', '2017/02/28', '2017/02/23');
 	   
-INSERT INTO produto (ID_prod,nome ,tamanho ,marca ,tipoMedida,possui_ID_prod )
-VALUES  (1,  'Banana', 		      NULL, NULL,        'kg',   NULL),
-	(2,  'Coca Cola',	      300,  NULL,        'ml',   NULL),
-	(3,  'Coca Cola',	      600,  NULL,        'ml',   NULL),
-	(4,  'Coca Cola',	      2,    NUll,        'l',    NULL),
-	(5,  'Arroz', 		      1,    'sepó',      'kg',   NULL),
-	(6,  'Feijao', 		      2,    'sabugo',    'kg',   NULL),
-	(7,  'Milho',  		      1,    'sadiga',    'kg',   NULL),
-	(8,  'Escova de dente',       10,   'Lonis',     'cm',   NULL),
-	(9,  'Copos de plastico',     300,  'Nanis',     'ml',   NULL),
-	(10, 'Pendrive', 	      8,    'Kingspon',  'gb',   NULL),
-	(11, 'Barra de chocolate',    200,  'maroto',    'g',    NULL),
-	(12, 'Lãmpada LED',           6,    'lapda',     'watt', NULL),
-	(13, 'Lâmpada Incandescente', 40,   'lapda',     'watt', NULL),
-	(14, 'Trigo',                 1,    'felizardo', 'kg',   NULL),
-	(15, 'Biscoito recheado',     100,  'Prakinas',  'g',    NULL),
-	(16, 'Batata chips',          75,   'Muffles',   'g',    NULL),
-	(17, 'Detergente',            500,  'Limol',     'ml',   NULL),
-	(18, 'Par de Chinelos',       NULL, 'Cavaibana', NULL,   NULL),
-	(19, 'Carne picanha',         1,     NULL,       'kg',   NULL),
-	(20, 'Pacote de lenço',       NULL, 'glinex',    NULL,   NULL);
+	  
+
+--Alterado em 30/05/17	   
+INSERT INTO produto (ID_prod, nome, ID_tmed, ID_marc ,tamanho ,possui_ID_prod )
+VALUES  (1,  'Banana',            1,  1,   NULL,      NULL),
+	(2,  'Coca Cola',             8,  4,    300,      NULL),
+	(3,  'Coca Cola',             8,  4,	600,      NULL),
+	(4,  'Coca Cola',             2,  4,	  2,      NULL),
+	(5,  'Arroz',                 2,  3,	  1,      NULL),
+	(6,  'Feijao',                2,  3, 	  2,      NULL),
+	(7,  'Milho',  	              2,  6,      1,      NULL),
+	(8,  'Escova de dente',       9,  5,     10,      NULL),
+	(9,  'Copos de plastico',     8,  5,    300,      NULL),
+	(10, 'Pendrive', 	          8,  9,     16,      NULL),
+	(11, 'Barra de chocolate',    3,  2,    200,      NULL),
+	(12, 'Lãmpada LED',           7,  9,      6,      NULL),
+	(13, 'Lâmpada Incandescente', 7,  9,     40,      NULL),
+	(14, 'Trigo',                 1,  3,      1,      NULL),
+	(15, 'Biscoito recheado',     3,  2,    100,      NULL),
+	(16, 'Batata chips',          3,  7,     75,      NULL),
+	(17, 'Detergente',            8,  5,    500,      NULL),
+	(18, 'Par de Chinelos',       4,  1,   NULL,      NULL),
+	(19, 'Carne picanha',         1,  6,   NULL,      NULL),
+	(20, 'Pacote de lenço',       5,  1,   NULL,      NULL);
 		
 INSERT INTO avalia(nota , Atributo2 ,ID_supe, ID_prod , ID_pess)
 VALUES  (1, 'Banana podre',    1, 1, 1),
