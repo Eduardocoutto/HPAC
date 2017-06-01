@@ -240,7 +240,7 @@ VALUES  (1, 1,'29123123', 'Rua dos estudantes',  661, 'Ifes Serra'),
         (9, 1,          '29123332', 'Rua Juraci',          212,  'Nehum'),
         (10,1,'29165082', 'Rua Herman Stern', 371, 'Condominio');
 		
-INSERT INTO avaliacao_sistema (nota , comentario)
+INSERT INTO avalia_sys (nota , comentario)
 VALUES  (1, 'Banana podre'   ),
 	(5, 'Dá pro gasto'   ),
 	(9, 'Muito bom'      ),
@@ -333,7 +333,7 @@ VALUES  (1,  'Banana',            1,  1,   NULL,      NULL),
 	(19, 'Carne picanha',         1,  6,   NULL,      NULL),
 	(20, 'Pacote de lenço',       5,  1,   NULL,      NULL);
 		
-INSERT INTO avalia(nota , Atributo2 ,ID_supe, ID_prod , ID_pess)
+INSERT INTO avalia(nota , comentario,ID_supe, ID_prod , ID_pess)
 VALUES  (1, 'Banana podre',    1, 1, 1),
 	(5, 'Dá pro gasto',    8, 2, 2),
 	(9, 'Muito bom',       3, 5, 3),
