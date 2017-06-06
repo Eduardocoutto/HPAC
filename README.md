@@ -129,8 +129,8 @@ SELECT  comentario FROM avalia_sys WHERE comentario LIKE '%bom%';
 SELECT  * FROM supermercado where nome like '%mart%' and unidade like 'V%';
 SELECT  * FROM supermercado where nome like '__ro__';
 SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';
-```<br>
-####9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+```
+<br>####9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 ####9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)<br>
         Entrega até este ponto em: (Data a ser definida)
 ####9.7	CONSULTAS COM GROUP BY (Mínimo 5)<br>
