@@ -123,6 +123,11 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
 ####9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)<br>
 ####9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)<br>
 ####9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
+        SELECT * FROM PRODUTO WHERE nome LIKE '%Carne%';
+        SELECT  comentario FROM avalia_sys WHERE comentario LIKE '%bom%';
+        SELECT  * FROM supermercado where nome like '%mart%' and unidade like 'V%';
+        SELECT  * FROM supermercado where nome like '__ro__';
+        SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';
 ####9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 ####9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)<br>
         Entrega até este ponto em: (Data a ser definida)
