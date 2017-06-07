@@ -165,6 +165,19 @@ where avalia.id_pess = pessoa.id_pess and avalia.id_prod = produto.id_prod and a
 ```
 
 ####9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)<br>
+```
+SELECT nota as avaliação, comentario as opinião, id_supe, id_prod, id_pess
+	FROM avalia;
+
+SELECT id_list, id_prod, quantidade, quantidade*2
+	FROM public.contem;
+
+SELECT id_prod, id_tmed, id_marc, nome, tamanho FROM public.produto where id_marc=9 or id_marc=4
+
+SELECT id_prod, id_tmed, id_marc, nome, tamanho FROM public.produto where id_tmed=2 and id_marc=3
+
+SELECT id_prod, id_tmed, id_marc, nome as produto, tamanho FROM public.produto where id_tmed=2 and id_marc=3
+```
 ####9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
 ```
 SELECT * FROM PRODUTO WHERE nome LIKE '%Carne%';<br>
