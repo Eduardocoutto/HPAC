@@ -119,6 +119,27 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
 
 ###9	TABELAS E PRINCIPAIS CONSULTAS<br>
 ####9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+
+```
+select * from tipo_medida;
+select * from marca;
+select * from pais;
+select * from estado;
+select * from cidade;
+select * from bairro;
+select * from avalia_sys;
+select * from endereco;
+select * from supermercado;
+select * from pessoa;
+select * from tipo_contato;
+select * from contato;
+select * from lista_de_compras;
+select * from produto;
+select * from avalia;
+select * from venda;
+select * from venda_atacado;
+select * from contem;
+```
         Entrega até este ponto em: (Data a ser definida)<br/>
 ####9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)<br>
 ```
