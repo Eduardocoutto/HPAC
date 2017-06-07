@@ -119,13 +119,13 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
 
 ###9	TABELAS E PRINCIPAIS CONSULTAS<br>
 ####9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-        Entrega até este ponto em: (Data a ser definida)
+        Entrega até este ponto em: (Data a ser definida)<br/>
 ####9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)<br>
 ####9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)<br>
 ####9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
 ####9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 ####9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)<br>
-        Entrega até este ponto em: (Data a ser definida)
+        Entrega até este ponto em: (Data a ser definida)<br/>
 ####9.7	CONSULTAS COM GROUP BY (Mínimo 5)<br>
 ####9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 ####9.9	CONSULTAS COM SELF JOIN E VIEW (Todas Possíveis)<br>
