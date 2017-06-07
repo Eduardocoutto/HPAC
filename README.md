@@ -121,27 +121,27 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
 ####9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
         Entrega até este ponto em: (Data a ser definida)<br/>
 ####9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)<br>
-<code>
-select pessoa.nome, tipo_contato.tipo, contato.descricao as valor<br/>
-from contato, tipo_contato, pessoa<br/>
-where contato.id_tcon = tipo_contato.id_tcon and contato.id_pess = pessoa.id_pess;<br/>
-<br/>
-select supermercado.nome, supermercado.unidade, bairro.nome as bairro, cidade.nome as cidade<br/>
-from supermercado, endereco, bairro, cidade<br/>
-where supermercado.id_ende = endereco.id_ende and endereco.id_bair = bairro.id_bair and bairro.id_cida = cidade.id_cida;<br/>
-<br/>
+```
+select pessoa.nome, tipo_contato.tipo, contato.descricao as valor
+from contato, tipo_contato, pessoa
+where contato.id_tcon = tipo_contato.id_tcon and contato.id_pess = pessoa.id_pess;
+
+select supermercado.nome, supermercado.unidade, bairro.nome as bairro, cidade.nome as cidade
+from supermercado, endereco, bairro, cidade
+where supermercado.id_ende = endereco.id_ende and endereco.id_bair = bairro.id_bair and bairro.id_cida = cidade.id_cida;
+
 select lista_de_compras.nome as lista, produto.nome as produto, contem.quantidade<br/>
 from contem, lista_de_compras, produto<br/>
 where contem.id_list = lista_de_compras.id_list and contem.id_prod = produto.id_prod;<br/>
-<br/>
-select *<br/>
-from avalia_sys<br/>
-where nota > 5;<br/>
-<br/>
-select pessoa.nome as usuario, produto.nome as produto, supermercado.nome as supermercado, avalia.nota, avalia.comentario<br/>
-from avalia, produto, pessoa, supermercado<br/>
-where avalia.id_pess = pessoa.id_pess and avalia.id_prod = produto.id_prod and avalia.id_supe = supermercado.id_supe and nota between 3 and 7;<br/>
-</code>
+
+select *
+from avalia_sys
+where nota > 5;
+
+select pessoa.nome as usuario, produto.nome as produto, supermercado.nome as supermercado, avalia.nota, avalia.comentario
+from avalia, produto, pessoa, supermercado
+where avalia.id_pess = pessoa.id_pess and avalia.id_prod = produto.id_prod and avalia.id_supe = supermercado.id_supe and nota between 3 and 7;
+```
 
 ####9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)<br>
 ####9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
@@ -152,7 +152,7 @@ SELECT  * FROM supermercado where nome like '%mart%' and unidade like 'V%';<br>
 SELECT  * FROM supermercado where nome like '__ro__';<br>
 SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';<br>
 ```
-<br>
+
 <br>####9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 ####9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)<br>
         Entrega até este ponto em: (Data a ser definida)<br/>
