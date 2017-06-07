@@ -146,7 +146,7 @@ select * from contem;
 select pessoa.nome, tipo_contato.tipo, contato.descricao as valor
 from contato, tipo_contato, pessoa
 where contato.id_tcon = tipo_contato.id_tcon and contato.id_pess = pessoa.id_pess;
-
+```
 |nome | tipo | valor |
 | --- | --- | --- | 
 | Antonio | Telefone celular | +5521985556723 |
@@ -159,8 +159,7 @@ where contato.id_tcon = tipo_contato.id_tcon and contato.id_pess = pessoa.id_pes
 | Antonio | Email profissional | casablanca@cestadecompras.com.br |
 | Julieta | Email outro | Jubisk@cestadecompras.com.br |
 | Milena | Email pessoal | pink@cestadecompras.com.br |
-
-
+```
 select supermercado.nome, supermercado.unidade, bairro.nome as bairro, cidade.nome as cidade
 from supermercado, endereco, bairro, cidade
 where supermercado.id_ende = endereco.id_ende and endereco.id_bair = bairro.id_bair and bairro.id_cida = cidade.id_cida;
