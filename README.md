@@ -146,17 +146,7 @@ select * from contem;
 select pessoa.nome, tipo_contato.tipo, contato.descricao as valor
 from contato, tipo_contato, pessoa
 where contato.id_tcon = tipo_contato.id_tcon and contato.id_pess = pessoa.id_pess;
-csvToMarkdown( "nome","tipo","valor"
-"Antonio","Telefone celular","+5521985556723"
-"Guilherme","Telefone celular","+5527988857776"
-"Julieta","Telefone fixo","+553133367957"
-"Bartolomeu","Telefone fax","+552733377722"
-"Erica","Telefone celular","+5529804630127"
-"Erica","Email pessoal","novinha123@cestadecompras.com.br"
-"Beatriz","Email pessoal","asdfg@cestadecompras.com.br"
-"Antonio","Email profissional","casablanca@cestadecompras.com.br"
-"Julieta","Email outro","Jubisk@cestadecompras.com.br"
-"Milena","Email pessoal","pink@cestadecompras.com.br", ",", true);
+csvToMarkdown("nome,tipo,valor\nAntonio,Telefone celular,+5521985556723\nGuilherme,Telefone celular,+5527988857776\nJulieta,Telefone fixo,+553133367957\nBartolomeu,Telefone fax,+552733377722\nErica,Telefone celular,+5529804630127\nErica,Email pessoal,novinha123@cestadecompras.com.br\nBeatriz,Email pessoal,asdfg@cestadecompras.com.br\nAntonio,Email profissional,casablanca@cestadecompras.com.br\nJulieta,Email outro,Jubisk@cestadecompras.com.br\nMilena,Email pessoal,pink@cestadecompras.com.br\n", ",", true);
 
 
 select supermercado.nome, supermercado.unidade, bairro.nome as bairro, cidade.nome as cidade
