@@ -181,15 +181,22 @@ where avalia.id_pess = pessoa.id_pess and avalia.id_prod = produto.id_prod and a
 ```
 SELECT nota as avaliação, comentario as opinião, id_supe, id_prod, id_pess
 	FROM avalia;
+```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.3-1.PNG?raw=true "Title")<br>
-
+```
 SELECT id_list, id_prod, quantidade, quantidade*2
 	FROM public.contem;
+```
 
+```
 SELECT id_prod, id_tmed, id_marc, nome, tamanho FROM public.produto where id_marc=9 or id_marc=4
+```
 
+```
 SELECT id_prod, id_tmed, id_marc, nome, tamanho FROM public.produto where id_tmed=2 and id_marc=3
+```
 
+```
 SELECT id_prod, id_tmed, id_marc, nome as produto, tamanho FROM public.produto where id_tmed=5 or id_marc=6 or id_marc=7
 ```
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
