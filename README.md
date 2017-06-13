@@ -122,11 +122,29 @@ https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_deskto
 
 ```
 select * from tipo_medida;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-1.PNG?raw=true "Title")<br>
+```
 select * from marca;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-2.PNG?raw=true "Title")<br>
+```
 select * from pais;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-3.PNG?raw=true "Title")<br>
+```
 select * from estado;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-4.PNG?raw=true "Title")<br>
+```
 select * from cidade;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-5.PNG?raw=true "Title")<br>
+```
 select * from bairro;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-6.PNG?raw=true "Title")<br>
+```
 select * from avalia_sys;
 select * from endereco;
 select * from supermercado;
