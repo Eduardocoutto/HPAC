@@ -189,7 +189,7 @@ SELECT id_prod, id_tmed, id_marc, nome, tamanho FROM public.produto where id_mar
 
 SELECT id_prod, id_tmed, id_marc, nome, tamanho FROM public.produto where id_tmed=2 and id_marc=3
 
-SELECT id_prod, id_tmed, id_marc, nome as produto, tamanho FROM public.produto where id_tmed=2 and id_marc=3
+SELECT id_prod, id_tmed, id_marc, nome as produto, tamanho FROM public.produto where id_tmed=5 or id_marc=6 or id_marc=7
 ```
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
 ```
