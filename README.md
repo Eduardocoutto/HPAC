@@ -11,7 +11,7 @@ A Cesta de Compras é um sistema de banco de dados para apoiar o consumidor no p
 Integrantes do grupo:<br>
 Eduardo Couto eduardocoouto@gmail.com<br>
 Edmiltho Santos edmiltho@hotmail.com<br>
-Igor Caniçali<br>
+Igor Barcellos Caniçali igorcanicali@gmail.com<br>
 
 ### 2	INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
