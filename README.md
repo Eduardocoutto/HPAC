@@ -146,54 +146,85 @@ select * from bairro;
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-6.PNG?raw=true "Title")<br>
 ```
 select * from avalia_sys;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-7.PNG?raw=true "Title")<br>
+```
 select * from endereco;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-8.PNG?raw=true "Title")<br>
+```
 select * from supermercado;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-9.PNG?raw=true "Title")<br>
+```
 select * from pessoa;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-10.PNG?raw=true "Title")<br>
+```
 select * from tipo_contato;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-11.PNG?raw=true "Title")<br>
+```
 select * from contato;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-12.PNG?raw=true "Title")<br>
+```
 select * from lista_de_compras;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-13.PNG?raw=true "Title")<br>
+```
 select * from produto;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-14.PNG?raw=true "Title")<br>
+```
 select * from avalia;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-15.PNG?raw=true "Title")<br>
+```
 select * from venda;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-16.PNG?raw=true "Title")<br>
+```
 select * from venda_atacado;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-17.PNG?raw=true "Title")<br>
+```
 select * from contem;
 ```
-        Entrega até este ponto em: (Data a ser definida)<br/>
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-18.PNG?raw=true "Title")<br>
+
+<!--        Entrega até este ponto em: (Data a ser definida)<br/>-->
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)<br>
 ```
 select pessoa.nome, tipo_contato.tipo, contato.descricao as valor
 from contato, tipo_contato, pessoa
 where contato.id_tcon = tipo_contato.id_tcon and contato.id_pess = pessoa.id_pess;
 ```
-|nome | tipo | valor |
-| --- | --- | --- | 
-| Antonio | Telefone celular | +5521985556723 |
-| Guilherme | Telefone celular | +5527988857776 |
-| Julieta | Telefone fixo | +553133367957 |
-| Bartolomeu | Telefone fax | +552733377722 |
-| Erica | Telefone celular | +5529804630127 |
-| Erica | Email pessoal | novinha123@cestadecompras.com.br |
-| Beatriz | Email pessoal | asdfg@cestadecompras.com.br |
-| Antonio | Email profissional | casablanca@cestadecompras.com.br |
-| Julieta | Email outro | Jubisk@cestadecompras.com.br |
-| Milena | Email pessoal | pink@cestadecompras.com.br |
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.2-1.PNG?raw=true "Title")<br>
 ```
 select supermercado.nome, supermercado.unidade, bairro.nome as bairro, cidade.nome as cidade
 from supermercado, endereco, bairro, cidade
 where supermercado.id_ende = endereco.id_ende and endereco.id_bair = bairro.id_bair and bairro.id_cida = cidade.id_cida;
-
-select lista_de_compras.nome as lista, produto.nome as produto, contem.quantidade<br/>
-from contem, lista_de_compras, produto<br/>
-where contem.id_list = lista_de_compras.id_list and contem.id_prod = produto.id_prod;<br/>
-
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.2-2.PNG?raw=true "Title")<br>
+```
+select lista_de_compras.nome as lista, produto.nome as produto, contem.quantidade
+from contem, lista_de_compras, produto
+where contem.id_list = lista_de_compras.id_list and contem.id_prod = produto.id_prod;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.2-3.PNG?raw=true "Title")<br>
+```
 select *
 from avalia_sys
 where nota > 5;
-
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.2-4.PNG?raw=true "Title")<br>
+```
 select pessoa.nome as usuario, produto.nome as produto, supermercado.nome as supermercado, avalia.nota, avalia.comentario
 from avalia, produto, pessoa, supermercado
 where avalia.id_pess = pessoa.id_pess and avalia.id_prod = produto.id_prod and avalia.id_supe = supermercado.id_supe and nota between 3 and 7;
 ```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.2-5.PNG?raw=true "Title")<br>
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 2)<br>
 ```
