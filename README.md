@@ -54,25 +54,35 @@ link para a tabela: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/maste
     
  <!--   5.2 NOTACAO UML (Caso esteja fazendo a disciplina de analise)-->
 
-#### 5.1 Validação do Modelo Conceitual
+<!--#### 5.1 Validação do Modelo Conceitual
     <br>[Grupo01]: [Nomes dos que participaram na avaliação]
     <br>[Grupo02]: [Nomes dos que participaram na avaliação]
-
+-->
 #### 5.2 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
+<!--    [atributo]: [descrição da decisão]
     
     EXEMPLO:
     a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
     pode possuir para cada departamento mais de uma localização... 
     b) justifique!
+-->
+a) o campo de preço foi optado por ser armazenado em um relacionamento entre o produto e o supermecado pois varios supermecaods podem vender o mesmo produto e com preços diferentes.
+b) atendendo a criterio do professor os dados de pais ate bairro foram armazenados em tabelas propias
+c) as avaliações foram feitas separadas para evitar problemas com o destino dela
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
-    [objeto]: [descrição do objeto]
+<!--    [objeto]: [descrição do objeto]
     
     EXEMPLO:
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
-
+-->
+pais: Tabela que informa o nome do pais
+estado: Tabela que informa o nome do estado e o pais de origem dele
+cidade: Tabela que informa o nome da cidade e do estado de origem dele
+bairro: Tabela que informa o nome do bairro e da cidade de origem dele
+endereço: Tabela relativa ao resto dos dados do endereço
+contato: Tabela que in
 
 ### 6	MODELO LÓGICO<br>
 
