@@ -253,23 +253,23 @@ SELECT id_prod, id_tmed, id_marc, nome as produto, tamanho FROM public.produto w
 ```
 SELECT * FROM PRODUTO WHERE nome LIKE '%Carne%';
 ```
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-1.PNG?raw=true "Title")<br>
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-1.png?raw=true "Title")<br>
 ```
 SELECT  comentario FROM avalia_sys WHERE comentario LIKE '%bom%';
 ```
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-2.PNG?raw=true "Title")<br>
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-2.png?raw=true "Title")<br>
 ```
 SELECT  * FROM supermercado where nome like '%mart%' and unidade like 'V%';
 ```
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-3.PNG?raw=true "Title")<br>
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-3.png?raw=true "Title")<br>
 ```
 SELECT  * FROM supermercado where nome like '__ro__';
 ```
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-4.PNG?raw=true "Title")<br>
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-4.png?raw=true "Title")<br>
 ```
 SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';
 ```
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-5.PNG?raw=true "Title")<br>
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-5.png?raw=true "Title")<br>
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)<br>
