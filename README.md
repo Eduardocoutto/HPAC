@@ -69,6 +69,7 @@ link para a tabela: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/maste
 a) o campo de preço foi optado por ser armazenado em um relacionamento entre o produto e o supermecado pois varios supermecaods podem vender o mesmo produto e com preços diferentes.
 b) atendendo a criterio do professor os dados de pais ate bairro foram armazenados em tabelas propias
 c) as avaliações foram feitas separadas para evitar problemas com o destino dela
+d) a avaliação do sistema nao possui o usuario para ser anonima
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
 <!--    [objeto]: [descrição do objeto]
@@ -77,12 +78,107 @@ c) as avaliações foram feitas separadas para evitar problemas com o destino de
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 -->
-pais: Tabela que informa o nome do pais
-estado: Tabela que informa o nome do estado e o pais de origem dele
-cidade: Tabela que informa o nome da cidade e do estado de origem dele
-bairro: Tabela que informa o nome do bairro e da cidade de origem dele
-endereço: Tabela relativa ao resto dos dados do endereço
-contato: Tabela que in
+Tabela: agenda_lembrete 	- agenda de lembretes
+    Campo: ID_list      	- lista a ser lembrada
+    Campo: data         	- data a ser lembrada
+
+Tabela: avaliacao_produto	- avaliação de um produtp
+    Campo: ID_pess		- pessoa que esta avaliando
+    Campo: ID_pord		- produto que esta sendo avaliado
+    Campo: comentario		- comentario da avaliaçao
+    Campo: nota			- nota
+
+Tabela: avaliacao_sistema	- avaliação do sistema
+    Campo: comentario		- comentario
+    Campo: nota			- nora
+
+Tabela: avaliacao_supermecado	- avaliação do supermecado
+    Campo: ID_pess		- pessoa que esta avaliando
+    Campo: ID_supe		- supermecado que esta sendo avaliado
+    Campo: nota			- nota da avaliaçao
+    Campo: comentario		- comentario da avaliaçao
+
+Tabela: bairro			- bairro
+    Campo: ID_bair		- ID
+    Campo: ID_cida		- ID da cidade onde o bairro está
+    Campo: nome			- nome do bairro
+
+Tabela: contato			- tabla de contatos
+    Campo: ID_pess		- a pessoa
+    Campo: ID_tcon		- tipo de contato
+    Campo: descricao		- valor do dado(numero do telefone, e-mail, nome no face...)
+
+Tabela: contem			- o que esta contido na lista de compras
+    Campo: ID_list		- a lista a qual se refere
+    Campo: ID_pord		- o produto a qual se refere
+    Campo: quantidade		- a quantidade de produto existente na lista
+
+Tabela: endereço		- guarda o endereço
+    Campo: ID_bair		- o bairro
+    Campo: ID_ende		- ID
+    Campo: cep			- cep
+    Campo: complemento		- complemento
+    Campo: logradouro		- rua/av/beco...
+    Campo: nº			- numero
+
+Tabela: estado			- guarda o estado
+    Campo: ID_esta		- ID
+    Campo: ID_pais		- pais onde o estado esta
+    Campo: nome			- nome do estado
+
+Tabela: lista_de_compras	- lista de compras
+    Campo: ID_list		- ID
+    Campo: ID_pess		- pessoa que detem a lista
+    Campo: nome			- nome da lista
+    Campo: dataCria		- data de criação
+    Campo: dataFim		- data que a lista finda
+
+Tabela: marca			- tabela que armazena as marcas
+    Campo: ID_marc		- ID
+    Campo: nome			- nome da marca
+
+Tabela: pais			- Paises
+    Campo: ID_pais		- ID
+    Campo: nome			- nome
+
+Tabela: pessoa			- pessoa
+    Campo: ID_ende		- endereço da pessoa
+    Campo: ID_pess		- ID
+    Campo: data_nas		- data de nascimento
+    Campo: login
+    Campo: nivel
+    Campo: nome
+    Campo: senha
+    Campo: sexo
+
+Tabela: produto
+    Campo: ID_marc
+    Campo: ID_pord
+    Campo: ID_tmed
+    Campo: nome
+    Campo: tamanho
+
+Tabela: supermercado
+    Campo: ID_ende
+    Campo: ID_supe
+    Campo: logo
+    Campo: nome
+    Campo: unidade
+
+Tabela: tipo_contato
+    Campo: ID_tcon
+    Campo: tipo
+
+Tabela: tipo_medida
+    Campo: ID_tmed
+    Campo: nome
+
+Tabela: venda_atacado_atacado
+    Campo: ID_pord
+    Campo: ID_supe
+    Campo: preco
+    Campo: valido
+
 
 ### 6	MODELO LÓGICO<br>
 
