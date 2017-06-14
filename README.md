@@ -78,107 +78,107 @@ d) a avaliação do sistema nao possui o usuario para ser anonima
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 -->
-Tabela: agenda_lembrete 	- agenda de lembretes
-    Campo: ID_list      	- lista a ser lembrada
-    Campo: data         	- data a ser lembrada
-
-Tabela: avaliacao_produto	- avaliação de um produtp
-    Campo: ID_pess		- pessoa que esta avaliando
-    Campo: ID_pord		- produto que esta sendo avaliado
-    Campo: comentario		- comentario da avaliaçao
-    Campo: nota			- nota
-
-Tabela: avaliacao_sistema	- avaliação do sistema
-    Campo: comentario		- comentario
-    Campo: nota			- nora
-
-Tabela: avaliacao_supermecado	- avaliação do supermecado
-    Campo: ID_pess		- pessoa que esta avaliando
-    Campo: ID_supe		- supermecado que esta sendo avaliado
-    Campo: nota			- nota da avaliaçao
-    Campo: comentario		- comentario da avaliaçao
-
-Tabela: bairro			- bairro
-    Campo: ID_bair		- ID
-    Campo: ID_cida		- ID da cidade onde o bairro está
-    Campo: nome			- nome do bairro
-
-Tabela: contato			- tabla de contatos
-    Campo: ID_pess		- a pessoa
-    Campo: ID_tcon		- tipo de contato
-    Campo: descricao		- valor do dado(numero do telefone, e-mail, nome no face...)
-
-Tabela: contem			- o que esta contido na lista de compras
-    Campo: ID_list		- a lista a qual se refere
-    Campo: ID_pord		- o produto a qual se refere
-    Campo: quantidade		- a quantidade de produto existente na lista
-
-Tabela: endereço		- guarda o endereço
-    Campo: ID_bair		- o bairro
-    Campo: ID_ende		- ID
-    Campo: cep			- cep
-    Campo: complemento		- complemento
-    Campo: logradouro		- rua/av/beco...
-    Campo: nº			- numero
-
-Tabela: estado			- guarda o estado
-    Campo: ID_esta		- ID
-    Campo: ID_pais		- pais onde o estado esta
-    Campo: nome			- nome do estado
-
-Tabela: lista_de_compras	- lista de compras
-    Campo: ID_list		- ID
-    Campo: ID_pess		- pessoa que detem a lista
-    Campo: nome			- nome da lista
-    Campo: dataCria		- data de criação
-    Campo: dataFim		- data que a lista finda
-
-Tabela: marca			- tabela que armazena as marcas
-    Campo: ID_marc		- ID
-    Campo: nome			- nome da marca
-
-Tabela: pais			- Paises
-    Campo: ID_pais		- ID
-    Campo: nome			- nome
-
-Tabela: pessoa			- pessoa
-    Campo: ID_ende		- endereço da pessoa
-    Campo: ID_pess		- ID
-    Campo: data_nas		- data de nascimento
-    Campo: login
-    Campo: nivel
-    Campo: nome
-    Campo: senha
-    Campo: sexo
-
-Tabela: produto
-    Campo: ID_marc
-    Campo: ID_pord
-    Campo: ID_tmed
-    Campo: nome
-    Campo: tamanho
-
-Tabela: supermercado
-    Campo: ID_ende
-    Campo: ID_supe
-    Campo: logo
-    Campo: nome
-    Campo: unidade
-
-Tabela: tipo_contato
-    Campo: ID_tcon
-    Campo: tipo
-
-Tabela: tipo_medida
-    Campo: ID_tmed
-    Campo: nome
-
-Tabela: venda_atacado_atacado
-    Campo: ID_pord
-    Campo: ID_supe
-    Campo: preco
-    Campo: valido
-
+Tabela: agenda_lembrete 	- agenda de lembretes<br>
+    Campo: ID_list      	- lista a ser lembrada<br>
+    Campo: data         	- data a ser lembrada<br>
+<br>
+Tabela: avaliacao_produto	- avaliação de um produtp<br>
+    Campo: ID_pess		- pessoa que esta avaliando<br>
+    Campo: ID_pord		- produto que esta sendo avaliado<br>
+    Campo: comentario		- comentario da avaliaçao<br>
+    Campo: nota			- nota<br>
+<br>
+Tabela: avaliacao_sistema	- avaliação do sistema<br>
+    Campo: comentario		- comentario<br>
+    Campo: nota			- nora<br>
+<br>
+Tabela: avaliacao_supermecado	- avaliação do supermecado<br>
+    Campo: ID_pess		- pessoa que esta avaliando<br>
+    Campo: ID_supe		- supermecado que esta sendo avaliado<br>
+    Campo: nota			- nota da avaliaçao<br>
+    Campo: comentario		- comentario da avaliaçao<br>
+<br>
+Tabela: bairro			- bairro<br>
+    Campo: ID_bair		- ID<br>
+    Campo: ID_cida		- ID da cidade onde o bairro está<br>
+    Campo: nome			- nome do bairro<br>
+<br>
+Tabela: contato			- tabla de contatos<br>
+    Campo: ID_pess		- a pessoa<br>
+    Campo: ID_tcon		- tipo de contato<br>
+    Campo: descricao		- valor do dado(numero do telefone, e-mail, nome no face...)<br>
+<br>
+Tabela: contem			- o que esta contido na lista de compras<br>
+    Campo: ID_list		- a lista a qual se refere<br>
+    Campo: ID_pord		- o produto a qual se refere<br>
+    Campo: quantidade		- a quantidade de produto existente na lista<br>
+<br>
+Tabela: endereço		- guarda o endereço<br>
+    Campo: ID_bair		- o bairro<br>
+    Campo: ID_ende		- ID<br>
+    Campo: cep			- cep<br>
+    Campo: complemento		- complemento<br>
+    Campo: logradouro		- rua/av/beco...<br>
+    Campo: nº			- numero<br>
+<br>
+Tabela: estado			- guarda o estado<br>
+    Campo: ID_esta		- ID<br>
+    Campo: ID_pais		- pais onde o estado esta<br>
+    Campo: nome			- nome do estado<br>
+<br>
+Tabela: lista_de_compras	- lista de compras<br>
+    Campo: ID_list		- ID<br>
+    Campo: ID_pess		- pessoa que detem a lista<br>
+    Campo: nome			- nome da lista<br>
+    Campo: dataCria		- data de criação<br>
+    Campo: dataFim		- data que a lista finda<br>
+<br>
+Tabela: marca			- tabela que armazena as marcas<br>
+    Campo: ID_marc		- ID<br>
+    Campo: nome			- nome da marca<br>
+<br>
+Tabela: pais			- Paises<br>
+    Campo: ID_pais		- ID<br>
+    Campo: nome			- nome<br>
+<br>
+Tabela: pessoa			- pessoa<br>
+    Campo: ID_ende		- endereço da pessoa<br>
+    Campo: ID_pess		- ID<br>
+    Campo: data_nas		- data de nascimento<br>
+    Campo: login<br>
+    Campo: nivel<br>
+    Campo: nome<br>
+    Campo: senha<br>
+    Campo: sexo<br>
+<br>
+Tabela: produto<br>
+    Campo: ID_marc<br>
+    Campo: ID_pord<br>
+    Campo: ID_tmed<br>
+    Campo: nome<br>
+    Campo: tamanho<br>
+<br>
+Tabela: supermercado<br>
+    Campo: ID_ende<br>
+    Campo: ID_supe<br>
+    Campo: logo<br>
+    Campo: nome<br>
+    Campo: unidade<br>
+<br>
+Tabela: tipo_contato<br>
+    Campo: ID_tcon<br>
+    Campo: tipo<br>
+<br>
+Tabela: tipo_medida<br>
+    Campo: ID_tmed<br>
+    Campo: nome<br>
+<br>
+Tabela: venda_atacado_atacado<br>
+    Campo: ID_pord<br>
+    Campo: ID_supe<br>
+    Campo: preco<br>
+    Campo: valido<br>
+<br>
 
 ### 6	MODELO LÓGICO<br>
 
