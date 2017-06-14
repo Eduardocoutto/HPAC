@@ -43,10 +43,10 @@ Link para telas desktop:
 https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/telas_desktop.pdf
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
-    Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas.
-    ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/TabelaGeral.png?raw=true "Tabela de dados Gerais")
-    link para a tabela: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/TabelaGeralDadosCestadeCompras.xlsx
-    <!--(esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados e deve ser criada antes do modelo conceitual)-->
+Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas.
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/TabelaGeral.png?raw=true "Tabela de dados Gerais")
+link para a tabela: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/asets/TabelaGeralDadosCestadeCompras.xlsx
+<!--(esta tabela tem a intenção de simular um relatório com todos os dados que serão armazenados e deve ser criada antes do modelo conceitual)-->
 
 ### 5	MODELO CONCEITUAL<br>
     5.1 NOTACAO ENTIDADE RELACIONAMENTO
