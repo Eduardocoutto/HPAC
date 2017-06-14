@@ -9,7 +9,7 @@ A Cesta de Compras é um sistema de banco de dados para apoiar o consumidor no p
 
 ### 1	COMPONENTES<br>
 Integrantes do grupo:<br>
-Eduardo Couto<br>
+Eduardo Couto eduardocoouto@gmail.com<br>
 Edmiltho Santos edmiltho@hotmail.com<br>
 Igor Caniçali<br>
 
@@ -251,12 +251,26 @@ SELECT id_prod, id_tmed, id_marc, nome as produto, tamanho FROM public.produto w
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.3-5.PNG?raw=true "Title")<br>
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 3) <br>
 ```
-SELECT * FROM PRODUTO WHERE nome LIKE '%Carne%';<br>
-SELECT  comentario FROM avalia_sys WHERE comentario LIKE '%bom%';<br>
-SELECT  * FROM supermercado where nome like '%mart%' and unidade like 'V%';<br>
-SELECT  * FROM supermercado where nome like '__ro__';<br>
-SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';<br>
+SELECT * FROM PRODUTO WHERE nome LIKE '%Carne%';
 ```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-1.PNG?raw=true "Title")<br>
+```
+SELECT  comentario FROM avalia_sys WHERE comentario LIKE '%bom%';
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-2.PNG?raw=true "Title")<br>
+```
+SELECT  * FROM supermercado where nome like '%mart%' and unidade like 'V%';
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-3.PNG?raw=true "Title")<br>
+```
+SELECT  * FROM supermercado where nome like '__ro__';
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-4.PNG?raw=true "Title")<br>
+```
+SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/9-4-5.PNG?raw=true "Title")<br>
+
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Todas Junções)<br>
         Entrega até este ponto em: (Data a ser definida)<br/>
