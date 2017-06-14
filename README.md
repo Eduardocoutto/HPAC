@@ -145,39 +145,39 @@ Tabela: pessoa			- pessoa<br>
     Campo: ID_ende		- endereço da pessoa<br>
     Campo: ID_pess		- ID<br>
     Campo: data_nas		- data de nascimento<br>
-    Campo: login<br>
-    Campo: nivel<br>
-    Campo: nome<br>
-    Campo: senha<br>
-    Campo: sexo<br>
+    Campo: login		- loguin do ususario<br>
+    Campo: nivel		- niel de confiança do usuario<br>
+    Campo: nome			- nome<br>
+    Campo: senha		- hash da senha<br>
+    Campo: sexo			- sexo do ser<br>
 <br>
-Tabela: produto<br>
-    Campo: ID_marc<br>
-    Campo: ID_pord<br>
-    Campo: ID_tmed<br>
-    Campo: nome<br>
-    Campo: tamanho<br>
+Tabela: produto			- produtos<br>
+    Campo: ID_marc		- marca do produto<br>
+    Campo: ID_pord		- ID<br>
+    Campo: ID_tmed		- tipo de medida da variavel(kg, L, unidades, bits...)<br>
+    Campo: nome			- nome do prodto<br>
+    Campo: tamanho		- tamanho  quanto da unidade de medida tem(5(L), 1M(bit)...)<br>
 <br>
-Tabela: supermercado<br>
-    Campo: ID_ende<br>
-    Campo: ID_supe<br>
-    Campo: logo<br>
-    Campo: nome<br>
-    Campo: unidade<br>
+Tabela: supermercado		- supermecado<br>
+    Campo: ID_ende		- endereço<br>
+    Campo: ID_supe		- ID<br>
+    Campo: logo			- logo(fig)<br>
+    Campo: nome			- nome<br>
+    Campo: unidade		- unidade<br>
 <br>
-Tabela: tipo_contato<br>
-    Campo: ID_tcon<br>
-    Campo: tipo<br>
+Tabela: tipo_contato		- tipo de contato<br>
+    Campo: ID_tcon		- ID<br>
+    Campo: tipo			- descrição do tipo(telefone movel, telefone residencial, fax, facebook, id no ICQ...)<br>
 <br>
-Tabela: tipo_medida<br>
-    Campo: ID_tmed<br>
-    Campo: nome<br>
+Tabela: tipo_medida		- tipo de medida<br>
+    Campo: ID_tmed		- ID<br>
+    Campo: nome			- texto que descreve(L, KG, T, Lb, anos luz...)<br>
 <br>
-Tabela: venda_atacado_atacado<br>
-    Campo: ID_pord<br>
-    Campo: ID_supe<br>
-    Campo: preco<br>
-    Campo: valido<br>
+Tabela: venda_atacado_atacado	- dedicada a aramzenar o preço do produto caso seja vendido mais barato em atacado<br>
+    Campo: ID_pord		- produto<br>
+    Campo: ID_supe		- supermecado<br>
+    Campo: preco		- preço<br>
+    Campo: valido		- se o preço está certo<br>
 <br>
 
 ### 6	MODELO LÓGICO<br>
