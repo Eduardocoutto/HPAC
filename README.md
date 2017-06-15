@@ -24,11 +24,15 @@ Entrevista com o usuário e identificação dos requisitos.<br>
 Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
 cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
 gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.--->
-O grupo deseja criar um sistema de informação para ajudar o civil comum a planejar melhor suas compras com mais facilidade e gastar menos dinheiro. Trata-se de um banco de dados cujo principal serviço é delegar informações e 
-comparativos de produtos.
 
-O sistema deve registrar o mesmo produto de vários estabelecimentos diferentes, o preço e localidade, e criar tabelas comparando os dados obtidos, a fim de que, no ato de consulta, possam ser verificadas facilmente as informações requeridas.
+O grupo deseja criar um sistema de informação para ajudar o civil comum a planejar melhor suas compras com mais facilidade e gastar menos dinheiro. Trata-se de um banco de dados cujo principal serviço é delegar informações e comparativos de produtos.
 
+O usuário faz o login antes de entrar no sistema. Se ele não tiver deverá fazer o cadastro. O usuário pode criar listas, definindo nome, e estabelecimentos que serão usados na busca por produtos. O usuário poderá adicionar produtos a uma lista de compra. Podendo adicionar itens fora do catálogo do sistema, mas não armazenando o registro no sistema. Uma lista é composta de itens. Um item pode ter categoria, preço, histórico, e estabelecimentos com o mesmo disponível. Deverá ter uma tela com informações de listas já criadas no sistema e uma tela para o controle e informações de uma lista. A tela de informações da lista deverá mostrar gastos com itens por categoria, melhor estabelecimento para compras, como chegar no estabelecimento sugerido. Deverá mostrar o melhor dia para fazer compras. Podendo criar um lembrete para o usuário lembrar de fazer as compras.
+ 
+O usuário utilizará uma lista para o auxiliar na hora da compra. O sistema deve ajuda-lo mostrando os itens da lista e mostrando o valor total da compra em tempo real. O usuário poderá colocar a quantidade em cada item. No final da compra o usuário precisa concluir a compra no aplicativo. A lista precisa ser registrada no histórico sendo disponível para consulta do usuário. O usuário poderá dar sugestões para o sistema, como itens e serviços. 
+ 
+O sistema deve registrar o mesmo item de vários estabelecimentos diferentes, o preço e localidade, avaliação de usuários que pode ser classificação com ou sem comentário, e criar tabelas comparando os dados obtidos, a fim de que, no ato de consulta, possam ser verificadas facilmente as informações requeridas. O sistema utilizará os dados das compras concluídas dos usuários para melhorar a confiabilidade dos preços indicados.
+ 
 A coleta de dados será feita em produtos mais populares como por exemplo: bebidas alcoólicas, refrigerantes, lanches e eletrodomésticos, visto que não há uma maneira certa de conseguir as informações de todos os produtos, necessitando então de um foco.
 
 
