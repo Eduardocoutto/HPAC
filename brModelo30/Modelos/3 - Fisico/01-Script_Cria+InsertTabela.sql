@@ -78,7 +78,7 @@ tipo VARCHAR(50)
 );
 
 
-CREATE TABLE IF NOT EXISTS contato (
+CREATE TABLE IF NOT EXISTS contem_produto (
 ID_pess INT,
 ID_tcon INT,
 descricao VARCHAR(70),
@@ -281,7 +281,7 @@ VALUES (1, 'Telefone fixo'),
        (7, 'Email profissional'),
        (8, 'Email outro');  
        
-INSERT INTO contato (ID_pess, ID_tcon, descricao)
+INSERT INTO contem_produto (ID_pess, ID_tcon, descricao)
 VALUES  (1, 2, '+5521985556723'),
 	(2, 2, '+5527988857776'),
 	(3, 1, '+553133367957' ),

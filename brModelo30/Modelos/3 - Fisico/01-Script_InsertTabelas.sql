@@ -214,7 +214,7 @@ VALUES  (1, 1,  1, 4.00,  10),
 	(1, 9,  1, 17.00, 8),
 	(1, 10, 1, 32.00, 3);
 	
-INSERT INTO contem (ID_list, ID_prod, quantidade)
+INSERT INTO contem_produto (ID_list, ID_prod, quantidade)
 VALUES  (1, 1,  5 ),
 	(1, 2,  8 ),
 	(1, 3,  20),

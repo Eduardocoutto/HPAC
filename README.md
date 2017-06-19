@@ -112,7 +112,7 @@ Tabela: contato			- tabla de contatos<br>
     Campo: ID_tcon		- tipo de contato<br>
     Campo: descricao		- valor do dado(numero do telefone, e-mail, nome no face...)<br>
 <br>
-Tabela: contem			- o que esta contido na lista de compras<br>
+Tabela: contem_produto	- o que esta contido na lista de compras<br>
     Campo: ID_list		- a lista a qual se refere<br>
     Campo: ID_pord		- o produto a qual se refere<br>
     Campo: quantidade		- a quantidade de produto existente na lista<br>
