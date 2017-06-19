@@ -59,8 +59,8 @@ link para a tabela: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/maste
  <!--   5.2 NOTACAO UML (Caso esteja fazendo a disciplina de analise)-->
 
 #### 5.1 Validação do Modelo Conceitual
-   <br>[Grupo01]: Olavo Curatola, Gabriel Marchezi e Helen França
-<!--    <br>[Grupo02]: [Nomes dos que participaram na avaliação]
+   <br>[GeMan]: Olavo Curatola, Gabriel Marchezi e Helen França.
+   <br>[Transpoint]: Serenna Ferrari, André Martins, Elimar Macena, Hellesandro Gonzaga.
 -->
 #### 5.2 DECISÕES DE PROJETO
 <!--    [atributo]: [descrição da decisão]
