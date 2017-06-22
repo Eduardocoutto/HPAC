@@ -299,17 +299,17 @@ VALUES (1, 'Telefone fixo'),
        (7, 'Email profissional'),
        (8, 'Email outro');    
        
-INSERT INTO contato (ID_pess, ID_tcon, descricao)
-VALUES  (1, 2, '+5521985556723'),
-	(2, 2, '+5527988857776'),
-	(3, 1, '+553133367957' ),
-	(4, 4, '+552733377722' ),
-	(5, 2, '+5529804630127'),
-	(5, 6, 'novinha123@cestadecompras.com.br'),
-	(6, 6, 'asdfg@cestadecompras.com.br'     ),
-	(1, 7, 'casablanca@cestadecompras.com.br'),
-	(3, 8, 'Jubisk@cestadecompras.com.br'    ),
-	(7, 6, 'pink@cestadecompras.com.br'      );
+INSERT INTO contato (ID_cont, ID_pess, ID_tcon, descricao)
+VALUES  (1, 1, 2, '+5521985556723'),
+	(2, 2, 2, '+5527988857776'),
+	(3, 3, 1, '+553133367957' ),
+	(4, 4, 4, '+552733377722' ),
+	(5, 5, 2, '+5529804630127'),
+	(6 ,5, 6, 'novinha123@cestadecompras.com.br'),
+	(7, 6, 6, 'asdfg@cestadecompras.com.br'     ),
+	(8, 1, 7, 'casablanca@cestadecompras.com.br'),
+	(9, 3, 8, 'Jubisk@cestadecompras.com.br'    ),
+	(10, 7, 6, 'pink@cestadecompras.com.br'      );
 	
 	   
 INSERT INTO lista_de_compras (ID_list, ID_pess, nome, dataCria, dataFim)
@@ -370,29 +370,29 @@ VALUES  (1, 'Bom',    1, 1),
 	(7, 'Mais ou menos', 4, 7),
 	(8, 'Ótimo',       5, 9);
 	
-INSERT INTO venda_varejo(ID_supe ,ID_prod ,valido , preco)
-VALUES  (1, 1,  1, 4.20 ),
-	(1, 2,  1, 5.50 ),
-	(1, 3,  1, 8.00 ),
-	(1, 4,  1, 12.30),
-	(1, 5,  1, 3.69 ),
-	(1, 6,  1, 3.59 ),
-	(1, 7,  1, 4.59 ),
-	(1, 8,  1, 18.39),
-	(1, 9,  1, 17.00),
-	(1, 10, 1, 32.00);
+INSERT INTO venda_varejo(ID_venv, ID_supe ,ID_prod ,valido , preco)
+VALUES  (1, 1, 1,  1, 4.20 ),
+	(2, 1, 2,  1, 5.50 ),
+	(3, 1, 3,  1, 8.00 ),
+	(4, 1, 4,  1, 12.30),
+	(5, 1, 5,  1, 3.69 ),
+	(6, 1, 6,  1, 3.59 ),
+	(7, 1, 7,  1, 4.59 ),
+	(8, 1, 8,  1, 18.39),
+	(9, 1, 9,  1, 17.00),
+	(10, 1, 10, 1, 32.00);
 		
-INSERT INTO venda_atacado(ID_supe ,ID_prod ,valido , preco, quantidade)
-VALUES  (1, 1,  1, 4.00,  10),
-	(1, 2,  1, 5.00,  5),
-	(1, 3,  1, 8.00,  3),
-	(1, 4,  1, 12.30, 7),
-	(1, 5,  1, 3.69,  2),
-	(1, 6,  1, 3.59,  9),
-	(1, 7,  1, 4.59,  6),
-	(1, 8,  1, 18.39, 7),
-	(1, 9,  1, 17.00, 8),
-	(1, 10, 1, 32.00, 3);
+INSERT INTO venda_atacado(ID_vena, ID_supe ,ID_prod ,valido , preco, quantidade)
+VALUES  (1, 1, 1,  1, 4.00,  10),
+	(2, 1, 2,  1, 5.00,  5),
+	(3, 1, 3,  1, 8.00,  3),
+	(4, 1, 4,  1, 12.30, 7),
+	(5, 1, 5,  1, 3.69,  2),
+	(6, 1, 6,  1, 3.59,  9),
+	(7, 1, 7,  1, 4.59,  6),
+	(8, 1, 8,  1, 18.39, 7),
+	(9, 1, 9,  1, 17.00, 8),
+	(10, 1, 10, 1, 32.00, 3);
 	
 INSERT INTO contem_produto (ID_list, ID_prod, quantidade)
 VALUES  (1, 1,  5 ),
