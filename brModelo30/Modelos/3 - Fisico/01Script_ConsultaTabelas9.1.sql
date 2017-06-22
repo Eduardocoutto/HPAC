@@ -14,6 +14,7 @@ select*from lista_de_compras;
 select*from produto;
 select*from avaliacao_produto;
 select*from avaliacao_supermercado;
+select*from data_Lemb;
 select*from venda_varejo;
 select*from venda_atacado;
 select*from contem_produto;
