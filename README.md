@@ -217,7 +217,7 @@ Tabela: venda_atacado_atacado	- dedicada a aramzenar o preço do produto caso se
 
 #### 8.3 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
  
-[insert + create link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/01-Script_Cria%2BInsertTabela.sql?raw=true "insert + crate")<br/> 
+[insert + create link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/CestadeComprasCreate%2BInsertFINISHED.sql?raw=true "insert + crate")<br/> 
         a) Junção dos scripts anteriores em um único script <br/>
         (tabelas e estruturas de dados + dados a serem inseridos)<br/>
         b) Criar um novo banco de dados para testar a restauracao <br/>
@@ -230,6 +230,87 @@ Tabela: venda_atacado_atacado	- dedicada a aramzenar o preço do produto caso se
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
+```
+select*from tipo_medida;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-1.PNG?raw=true "Title")<br>
+```
+select*from marca;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-2.PNG?raw=true "Title")<br>
+```
+select*from pais;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-3.PNG?raw=true "Title")<br>
+```
+select*from estado;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-4.PNG?raw=true "Title")<br>
+```
+select*from cidade;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-5.PNG?raw=true "Title")<br>
+```
+select*from bairro;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-6.PNG?raw=true "Title")<br>
+```
+select*from avalia_sys;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-7.PNG?raw=true "Title")<br>
+```
+select*from endereco;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-8.PNG?raw=true "Title")<br>
+```
+select*from supermercado;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-9.PNG?raw=true "Title")<br>
+```
+select*from pessoa;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-10.PNG?raw=true "Title")<br>
+```
+select*from tipo_contato;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-11.PNG?raw=true "Title")<br>
+```
+select*from contato;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-12.PNG?raw=true "Title")<br>
+```
+select*from lista_de_compras;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-13.PNG?raw=true "Title")<br>
+```
+select*from produto;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-14.PNG?raw=true "Title")<br>
+```
+select*from data_Lemb;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-15.PNG?raw=true "Title")<br>
+```
+select*from avaliacao_produto;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-16.PNG?raw=true "Title")<br>
+```
+select*from avaliacao_supermercado;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-17.PNG?raw=true "Title")<br>
+```
+select*from venda_varejo;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-18.PNG?raw=true "Title")<br>
+```
+select*from venda_atacado;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-19.PNG?raw=true "Title")<br>
+```
+select*from contem_produto;
+```
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-20.PNG?raw=true "Title")<br>
+<!--
 ```
 select * from tipo_medida;
 ```
@@ -302,7 +383,7 @@ select * from venda_atacado;
 select * from contem;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/Consulta9.1-18.PNG?raw=true "Title")<br>
-
+-->
 <!--        Entrega até este ponto em: (Data a ser definida)<br/>-->
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 3)<br>
 ```
