@@ -217,7 +217,7 @@ Tabela: venda_atacado_atacado	- dedicada a aramzenar o preço do produto caso se
 
 #### 8.3 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
  
-[insert + create link](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/CestadeComprasCreate%2BInsertFINISHED.sql?raw=true "insert + crate")<br/> 
+[insert + create link]https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/brModelo30/Modelos/3%20-%20Fisico/CestadeComprasCreateInsert.sql?raw=true "insert + crate")<br/> 
         a) Junção dos scripts anteriores em um único script <br/>
         (tabelas e estruturas de dados + dados a serem inseridos)<br/>
         b) Criar um novo banco de dados para testar a restauracao <br/>
