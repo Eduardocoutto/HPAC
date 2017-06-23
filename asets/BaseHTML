@@ -1,0 +1,65 @@
+Documento de Requisitos
+Projeto: Cesta de Compras
+Registro de alterações
+Versão	Responsável	Data	Alterações
+1.0	Eduardo, Edimitho, Igor e Lucas	12/03/2017	Criação do documento
+2.0	Eduardo, Lucas	20/03/2017	Atualização de requisitos
+ 
+ Introdução
+       Este documento aprensenta os requisitos de usuário do sistema cesta de compras e está organizado da seguinte forma: 
+1.     Descrição de próposito do sistema
+2.     Descrição do minimundo 
+3.     Requisitos funcionais
+4.     Regras de negócio
+5.     Requisitos não funcionais
+1. Descrição de propósitos do sistema
+A Cesta de Compras é um sistema de banco de dados para apoiar o consumidor no planejamento da compra de produtos, tendo como sua principal função: Consulta de tabelas de pesquisas de produtos. Para que essas atividades sejam realizadas, é necessário acessar as informações acerca dos estabelecimentos de venda e mantê-las atualizadas. Devem ser fornecidas facilidades de listagem das consultas de produtos, utilizando especificações como marcas, tipo do produto (alimento, bebida, etc), preço e local. O sistema deve gerar relatórios de acordo com a demanda de informações e parâmetros.
+ 
+2. Descrição do Minimundo
+ 
+O grupo deseja criar um sistema de informação para ajudar o civil comum a planejar melhor suas compras com mais facilidade e gastar menos dinheiro. Trata-se de um banco de dados cujo principal serviço é delegar informações e comparativos de produtos.
+ 
+        O usuário faz o login antes de entrar no sistema. Se ele não tiver deverá fazer o cadastro. O usuário pode criar listas, definindo nome, e estabelecimentos que serão usados na busca por produtos. O usuário poderá adicionar produtos a uma lista de compra. Podendo adicionar itens fora do catálogo do sistema, mas não armazenando o registro no sistema. Uma lista é composta de itens. Um item pode ter categoria, preço, histórico, e estabelecimentos com o mesmo disponível. Deverá ter uma tela com informações de listas já criadas no sistema e uma tela para o controle e informações de uma lista. A tela de informações da lista deverá mostrar gastos com itens por categoria, melhor estabelecimento para compras, como chegar no estabelecimento sugerido. Deverá mostrar o melhor dia para fazer compras. Podendo criar um lembrete para o usuário lembrar de fazer as compras.
+ 
+O usuário utilizará uma lista para o auxiliar na hora da compra. O sistema deve ajuda-lo mostrando os itens da lista e mostrando o valor total da compra em tempo real. O usuário poderá colocar a quantidade em cada item. No final da compra o usuário precisa concluir a compra no aplicativo. A lista precisa ser registrada no histórico sendo disponível para consulta do usuário. O usuário poderá dar sugestões para o sistema, como itens e serviços. 
+ 
+O sistema deve registrar o mesmo item de vários estabelecimentos diferentes, o preço e localidade, avaliação de usuários que pode ser classificação com ou sem comentário, e criar tabelas comparando os dados obtidos, a fim de que, no ato de consulta, possam ser verificadas facilmente as informações requeridas. O sistema utilizará os dados das compras concluídas dos usuários para melhorar a confiabilidade dos preços indicados.
+ 
+A coleta de dados será feita em produtos mais populares como por exemplo: bebidas alcoólicas, refrigerantes, lanches e eletrodomésticos, visto que não há uma maneira certa de conseguir as informações de todos os produtos, necessitando então de um foco.
+ 
+3. Requisitos Funcionais
+Identificador	Descrição 	Prioridade	Depende de
+RF01	Eu, como cliente e usuário preciso criar lista de compras, sendo uma lista de itens. Nesta lista é preciso armazenar data de criação, valor total.	Must	RF03
+RF02	Eu, como cliente e usuário, preciso controlar o histórico de preço dos produtos.	Should	RF01, RNF
+RF03	Eu, como cliente e usuário preciso cadastrar itens, como informações de nome, preço, localidade, categoria, sendo quantidade opcional.	Should	 
+RF04	Eu, como cliente e usuário preciso que tenha opção de salvar lista.	Must	 
+RF05	Eu, como cliente preciso ter a opção de banir usuários.	Should	RF03
+RF06	Eu, como cliente preciso ter a opção de reativar usuários.	Should	RF03
+RF07 	Eu, como cliente preciso de um relatório com os itens mais procurados.	Could	RF03 RF04
+RF08	Eu, como cliente preciso que meus clientes tenham uma área para sugerir produtos para o sistema.	Could	RF03 
+RF09	Eu, como cliente preciso de uma tela para realizar alterações em itens já adicionados no sistema	Must	RF01 
+RF10	Eu, como cliente preciso de uma tela para cadastro de empresas fornecedoras de produtos. Com informações de localidade, cartões aceitos e horário de funcionamento.	Must	 
+RF11	Eu, como cliente e usuário preciso que o app me de acompanhamento no momento da compra para conferencia dos preços e atualização do catalogo do sistema.	Should	RF01, RF03
+RF12	Eu, como cliente posso ter acesso a lista de compras de outro usuário. 	Could	RF 03
+RF13	Eu, como cliente e usuário preciso ter uma tela para registro e login no sistema.	Must	RF 03
+ 
+4. Regras de negócio
+Identificador	Descrição	Depende de
+RN01	Apenas usuários maiores de 18 anos podem ter acesso a itens como bebidas alcoólicas.	RF 03
+RN02	O administrador do sistema deverá cadastrar as categorias de produtos do sistema	 
+RF01
+RN03	Todos os usuários deveram aceitar os termos de uso do sistema	RF13
+ 
+ 
+ 
+ 
+5. Requisitos não funcionais
+ 
+Identificador	Descrição	Prioridade	Depende de
+RNF01	O sistema precisa ter o controle de itens proibidos para menos de idade.	Must	RF 01
+RNF02	O sistema precisa de um controle para a tela de adição, remoção e edição de produtos no sistema.	Must	RF 03
+RNF03	O tempo para processamentos de pedidos do sistema deve ser inferior a 5 segundos.	Should	RF01 RF 03 RF 04
+RNF04	A persistência dos dados deve ser implementada em SGBD postgree.	Must	 
+RNF05	O usuário precisa confirmar o seu email através de um número de confirmação	Must	RF03
+RNF06	O sistema deve ter uma versão web e mobile	Must	 
+ 
