@@ -231,83 +231,83 @@ Tabela: venda_atacado_atacado	- dedicada a aramzenar o preço do produto caso se
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
 
 ```
-select*from tipo_medida;
+select * from tipo_medida;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-1.PNG?raw=true "Title")<br>
 ```
-select*from marca;
+select * from marca;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-2.PNG?raw=true "Title")<br>
 ```
-select*from pais;
+select * from pais;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-3.PNG?raw=true "Title")<br>
 ```
-select*from estado;
+select * from estado;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-4.PNG?raw=true "Title")<br>
 ```
-select*from cidade;
+select * from cidade;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-5.PNG?raw=true "Title")<br>
 ```
-select*from bairro;
+select * from bairro;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-6.PNG?raw=true "Title")<br>
 ```
-select*from avalia_sys;
+select * from avalia_sys;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-7.PNG?raw=true "Title")<br>
 ```
-select*from endereco;
+select * from endereco;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-8.PNG?raw=true "Title")<br>
 ```
-select*from supermercado;
+select * from supermercado;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-9.PNG?raw=true "Title")<br>
 ```
-select*from pessoa;
+select * from pessoa;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-10.PNG?raw=true "Title")<br>
 ```
-select*from tipo_contato;
+select * from tipo_contato;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-11.PNG?raw=true "Title")<br>
 ```
-select*from contato;
+select * from contato;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-12.PNG?raw=true "Title")<br>
 ```
-select*from lista_de_compras;
+select * from lista_de_compras;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-13.PNG?raw=true "Title")<br>
 ```
-select*from produto;
+select * from produto;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-14.PNG?raw=true "Title")<br>
 ```
-select*from data_Lemb;
+select * from data_Lemb;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-15.PNG?raw=true "Title")<br>
 ```
-select*from avaliacao_produto;
+select * from avaliacao_produto;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-16.PNG?raw=true "Title")<br>
 ```
-select*from avaliacao_supermercado;
+select * from avaliacao_supermercado;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-17.PNG?raw=true "Title")<br>
 ```
-select*from venda_varejo;
+select * from venda_varejo;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-18.PNG?raw=true "Title")<br>
 ```
-select*from venda_atacado;
+select * from venda_atacado;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-19.PNG?raw=true "Title")<br>
 ```
-select*from contem_produto;
+select * from contem_produto;
 ```
 ![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/consulta9.1-20.PNG?raw=true "Title")<br>
 <!--
@@ -491,6 +491,16 @@ SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';
     b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 ### OBSERVAÇÕES IMPORTANTES
 
 #### Em tese todos os arquivos do trabalho devem ser compartilhados no git 
@@ -498,6 +508,16 @@ SELECT  * FROM lista_de_compras as LC WHERE LC.nome like '%ca_a%';
 
 #### Todos os grupos deverão fazer Fork deste repositório e dar permissões administrativas ao usuário deste GIT, para acompanhamento do trabalho.
 
+
+
 #### Os usuários criados no GIT devem possuir o nome de identificação do aluno (não serão aceitos nomes como Eu123, meuprojeto, pro456, etc). Em caso de dúvida comunicar o professor.
+
+
+
+
+
+
+
+
 
 
