@@ -1,21 +1,20 @@
-# TRABALHO 01:  Cesta De Compras
+# TRABALHO 02:  Revisão - HPAC - Histórico de Pacientes
 
 Trabalho desenvolvido durante a disciplina de BD
 
 # Sumário
 
-<!---A Cesta de Compras é um sistema de banco de dados para apoiar o consumidor no planejamento da compra de produtos, tendo como sua principal função: consulta de tabelas de pesquisas de produtos.--->
-A Cesta de Compras é um sistema de banco de dados para apoiar o consumidor no planejamento da compra de produtos, tendo como sua principal função: consulta de tabelas de pesquisas de produtos. Para que essas atividades sejam realizadas, é necessário acessar as informações acerca dos estabelecimentos de venda e mantê-las atualizadas. Devem ser fornecidas facilidades de listagem das consultas de produtos, utilizando especificações como marcas, tipo do produto (alimento, bebida, etc), preço e local. O sistema deve gerar relatórios de acordo com a demanda de informações e parâmetros.
+Histórico de Pacientes é um sistema de banco de dados pessoal do paciente. Tendo como sua principal função: Registrar as consultas, exames e laudos, realizadas pelo paciente com diversos médicos e especialista ao longo de sua vida. Serão registrados no sistema os dados como, nome do médico, especialidade, data da consulta, CRM, diagnóstico, solicitações e resultados de exames, laudos e pareceres.
 
 ### 1	COMPONENTES<br>
 Integrantes do grupo:<br>
 Eduardo Couto eduardocoouto@gmail.com<br>
-Edmiltho Santos edmiltho@hotmail.com<br>
-Igor Barcellos Caniçali igorcanicali@gmail.com<br>
+Olavo Curatola olavo.curatola@gmail.com<br>
+Lucas Garcia lucasoliveiragarcia@live.com<br>
 
 ### 2	INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
-<br>e motivação da escolha realizada. <br>
+Este documento contém a especificação do projeto do banco de dados do HPAC
+<br>Construir ao longo da vida das pessoas um dossiê com todos os registros de problemas de saúde. Este dossiê é portado e gerenciado pelo paciente, podendo ser disponibilizado ou acessado por um médico sob sua autorização<br>
 
 ### 3	MINI-MUNDO<br>
 
