@@ -4,7 +4,7 @@ Trabalho desenvolvido durante a disciplina de BD
 
 # Sumário
 
-Histórico de Pacientes é um sistema de banco de dados pessoal do paciente. Tendo como sua principal função: Registrar as consultas, exames e laudos, realizadas pelo paciente com diversos médicos e especialista ao longo de sua vida. Serão registrados no sistema os dados como, nome do médico, especialidade, data da consulta, CRM, diagnóstico, solicitações e resultados de exames, laudos e pareceres.
+Histórico de Pacientes é um sistema de banco de dados pessoal do paciente. O sistema tem como sua principal função: Registrar as consultas, exames e laudos, realizadas pelo paciente com diversos médicos e especialistas ao longo de sua vida. Serão registrados no sistema dados tais como; nome do médico, especialidade, data da consulta, CRM, diagnóstico, solicitações e resultados de exames, laudos e pareceres.
 
 ### 1	COMPONENTES<br>
 Integrantes do grupo:<br>
@@ -13,8 +13,8 @@ Olavo Curatola olavo.curatola@gmail.com<br>
 Lucas Garcia lucasoliveiragarcia@live.com<br>
 
 ### 2	INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados do HPAC
-<br>Construir ao longo da vida das pessoas um dossiê com todos os registros de problemas de saúde. Este dossiê é portado e gerenciado pelo paciente, podendo ser disponibilizado ou acessado por um médico sob sua autorização<br>
+Este documento contém a especificação do projeto do banco de dados do HPAC<br>
+A principal motivação para o desenvolvimento desse sistema é possibilitar uma maior segurança no uso de informações do paciente, no tocante a qualidade e confiabilidade da informação e tambem quanto a permissão de acesso a dados tão sensíveis. A idéia é construir ao longo da vida das pessoas um dossiê com todos os registros de seus problemas de saúde, com os resultados de exames e teste a cada momento de sua vida. Este dossiê deverá ser portado e gerenciado pelo paciente, podendo ser disponibilizado ou acessado por um médico sob sua autorização<br>
 
 ### 3	MINI-MUNDO<br>
 
