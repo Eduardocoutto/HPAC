@@ -27,13 +27,13 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.--
 O grupo deseja criar um sistema de informação para gerenciar as informações relacionadas às consultas médicas que as pessoas fazem  ao longo da vida, o intuito é que as mesmas tenham suas informações documentadas em nosso sistema e apresentem ao seu médico e evitem de
 ter que falar todo o seu histórico a cada médico que for consultado.
 
-O usuário faz o login antes de entrar no sistema. Se ele não tiver deverá fazer o cadastro. O usuário pode criar listas, definindo nome, e estabelecimentos que serão usados na busca por produtos. O usuário poderá adicionar produtos a uma lista de compra. Podendo adicionar itens fora do catálogo do sistema, mas não armazenando o registro no sistema. Uma lista é composta de itens. Um item pode ter categoria, preço, histórico, e estabelecimentos com o mesmo disponível. Deverá ter uma tela com informações de listas já criadas no sistema e uma tela para o controle e informações de uma lista. A tela de informações da lista deverá mostrar gastos com itens por categoria, melhor estabelecimento para compras, como chegar no estabelecimento sugerido. Deverá mostrar o melhor dia para fazer compras. Podendo criar um lembrete para o usuário lembrar de fazer as compras.
+O usuário deve fazer o login e digitar sua senha para entrar no sistema, caso já esteja cadastrado. Caso contrário, deverá fazer o cadastro, fornecendo nome completo, CPF, Identidade, endereço, telefone, e-mail, criando sua senha pessoal. Em seguida terá acesso as funcionalidade de criação, consulta e atualização de seu histórico. Podendo incluir exames, radiografias, tomografias, ressonâncias magnética, diagnósticos, laudos e comentários pertinentes. 
+Além disso, o sistema deverá registrar todo o receituário prescrito para o paciente, bem como eventuais internações clinicas ou hospitalares, cirurgias e de mais procedimentos médicos.
+O paciente poderá a qualquer momento atualizar seu histórico com a inserção de dados de novas consultas e exames, assim como poderá inserir resultados de exames antigos que eventualmente encontre em seus arquivos pessoais (em papel), podendo voltar na linha do tempo para completar informações e dar maior consistência ao seu dossiê.
+O sistema deverá ser multiplataforma com acesso por smartphones e computadores pessoais, com acesso em tempo integral. Além disso, deverá possibilitar o acesso rápido aos dados.
  
-O usuário utilizará uma lista para o auxiliar na hora da compra. O sistema deve ajuda-lo mostrando os itens da lista e mostrando o valor total da compra em tempo real. O usuário poderá colocar a quantidade em cada item. No final da compra o usuário precisa concluir a compra no aplicativo. A lista precisa ser registrada no histórico sendo disponível para consulta do usuário. O usuário poderá dar sugestões para o sistema, como itens e serviços. 
- 
-O sistema deve registrar o mesmo item de vários estabelecimentos diferentes, o preço e localidade, avaliação de usuários que pode ser classificação com ou sem comentário, e criar tabelas comparando os dados obtidos, a fim de que, no ato de consulta, possam ser verificadas facilmente as informações requeridas. O sistema utilizará os dados das compras concluídas dos usuários para melhorar a confiabilidade dos preços indicados.
- 
-A coleta de dados será feita em produtos mais populares como por exemplo: bebidas alcoólicas, refrigerantes, lanches e eletrodomésticos, visto que não há uma maneira certa de conseguir as informações de todos os produtos, necessitando então de um foco.
+
+
 
 
 ### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
