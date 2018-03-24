@@ -79,109 +79,39 @@ d) a avaliação do sistema nao possui o usuario para ser anonima
 <!--    [objeto]: [descrição do objeto]
     
     EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    PACIENTE: Tabela que armazena as informações relativas ao paciente<br>
+    CPF: campo que armazena o número de Cadastro de Pessoa Física de cada paciente.<br>
 -->
-Tabela: agenda_lembrete 	- agenda de lembretes<br>
-    Campo: ID_list      	- lista a ser lembrada<br>
-    Campo: data         	- data a ser lembrada<br>
+Tabela: receita		 	- receita do paciente<br>
+    Campo: ID_receita      	- ID<br>
+    Campo: data         	- data<br>
 <br>
-Tabela: avaliacao_produto	- avaliação de um produtp<br>
-    Campo: ID_pess		- pessoa que esta avaliando<br>
-    Campo: ID_pord		- produto que esta sendo avaliado<br>
-    Campo: comentario		- comentario da avaliaçao<br>
-    Campo: nota			- nota<br>
-<br>
-Tabela: avaliacao_sistema	- avaliação do sistema<br>
-    Campo: comentario		- comentario<br>
-    Campo: nota			- nora<br>
-<br>
-Tabela: avaliacao_supermecado	- avaliação do supermecado<br>
-    Campo: ID_pess		- pessoa que esta avaliando<br>
-    Campo: ID_supe		- supermecado que esta sendo avaliado<br>
-    Campo: nota			- nota da avaliaçao<br>
-    Campo: comentario		- comentario da avaliaçao<br>
-<br>
-Tabela: bairro			- bairro<br>
-    Campo: ID_bair		- ID<br>
-    Campo: ID_cida		- ID da cidade onde o bairro está<br>
-    Campo: nome			- nome do bairro<br>
-<br>
-Tabela: contato			- tabla de contatos<br>
-    Campo: ID_pess		- a pessoa<br>
-    Campo: ID_tcon		- tipo de contato<br>
-    Campo: descricao		- valor do dado(numero do telefone, e-mail, nome no face...)<br>
-<br>
-Tabela: contem_produto	- o que esta contido na lista de compras<br>
-    Campo: ID_list		- a lista a qual se refere<br>
-    Campo: ID_pord		- o produto a qual se refere<br>
-    Campo: quantidade		- a quantidade de produto existente na lista<br>
-<br>
-Tabela: endereço		- guarda o endereço<br>
-    Campo: ID_bair		- o bairro<br>
-    Campo: ID_ende		- ID<br>
-    Campo: cep			- cep<br>
-    Campo: complemento		- complemento<br>
-    Campo: logradouro		- rua/av/beco...<br>
-    Campo: nº			- numero<br>
-<br>
-Tabela: estado			- guarda o estado<br>
-    Campo: ID_esta		- ID<br>
-    Campo: ID_pais		- pais onde o estado esta<br>
-    Campo: nome			- nome do estado<br>
-<br>
-Tabela: lista_de_compras	- lista de compras<br>
-    Campo: ID_list		- ID<br>
-    Campo: ID_pess		- pessoa que detem a lista<br>
-    Campo: nome			- nome da lista<br>
-    Campo: dataCria		- data de criação<br>
-    Campo: dataFim		- data que a lista finda<br>
-<br>
-Tabela: marca			- tabela que armazena as marcas<br>
-    Campo: ID_marc		- ID<br>
-    Campo: nome			- nome da marca<br>
-<br>
-Tabela: pais			- Paises<br>
-    Campo: ID_pais		- ID<br>
+Tabela: medico			- médico<br>
+    Campo: ID_medico		- ID<br>
     Campo: nome			- nome<br>
 <br>
-Tabela: pessoa			- pessoa<br>
-    Campo: ID_ende		- endereço da pessoa<br>
-    Campo: ID_pess		- ID<br>
-    Campo: data_nas		- data de nascimento<br>
-    Campo: login		- loguin do ususario<br>
-    Campo: nivel		- niel de confiança do usuario<br>
+Tabela: laudo			- laudo do paciente<br>
+    Campo: ID_laudo		- ID<br>
+    Campo: data			- data<br>
+<br>
+Tabela: Exame			- exame do paciente<br>
+    Campo: IDExame		- ID<br>
+    Campo: Data			- Data<br>
+<br>
+Tabela: Consulta		- consulta do paciente<br>
+    Campo: Diagnostico		- Diagnóstico do médico sobre o paciente<br>
+<br>
+Tabela: paciente		- paciente<br>
+    Campo: ID_paciente		- ID<br>
+    Campo: identidade		- identidade<br>
+    Campo: cpf			- CPF<br>
     Campo: nome			- nome<br>
-    Campo: senha		- hash da senha<br>
-    Campo: sexo			- sexo do ser<br>
-<br>
-Tabela: produto			- produtos<br>
-    Campo: ID_marc		- marca do produto<br>
-    Campo: ID_pord		- ID<br>
-    Campo: ID_tmed		- tipo de medida da variavel(kg, L, unidades, bits...)<br>
-    Campo: nome			- nome do prodto<br>
-    Campo: tamanho		- tamanho  quanto da unidade de medida tem(5(L), 1M(bit)...)<br>
-<br>
-Tabela: supermercado		- supermecado<br>
-    Campo: ID_ende		- endereço<br>
-    Campo: ID_supe		- ID<br>
-    Campo: logo			- logo(fig)<br>
-    Campo: nome			- nome<br>
-    Campo: unidade		- unidade<br>
-<br>
-Tabela: tipo_contato		- tipo de contato<br>
-    Campo: ID_tcon		- ID<br>
-    Campo: tipo			- descrição do tipo(telefone movel, telefone residencial, fax, facebook, id no ICQ...)<br>
-<br>
-Tabela: tipo_medida		- tipo de medida<br>
-    Campo: ID_tmed		- ID<br>
-    Campo: nome			- texto que descreve(L, KG, T, Lb, anos luz...)<br>
-<br>
-Tabela: venda_atacado_atacado	- dedicada a aramzenar o preço do produto caso seja vendido mais barato em atacado<br>
-    Campo: ID_pord		- produto<br>
-    Campo: ID_supe		- supermecado<br>
-    Campo: preco		- preço<br>
-    Campo: valido		- se o preço está certo<br>
+    Campo: CPF			- CPF<br>
+    Campo: data_nasc		- data<br>
+    Campo: endereço		- endereço<br>
+    Campo: telefone		- telefone<br>
+    Campo: login		- login de acesso ao sistema<br>
+    Campo: senha		- senha de acesso ao sistema<br>
 <br>
 
 ### 6	MODELO LÓGICO<br>
