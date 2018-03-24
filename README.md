@@ -54,7 +54,7 @@ link para a tabela: https://github.com/Eduardocoutto/Cesta-de-Compras/blob/maste
 
 ### 5	MODELO CONCEITUAL<br>
     5.1 NOTACAO ENTIDADE RELACIONAMENTO
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/modelo conceitual HPAC.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/modeloconceitualHPAC.png?raw=true "Modelo Conceitual")
     
  <!--   5.2 NOTACAO UML (Caso esteja fazendo a disciplina de analise)-->
 
@@ -189,7 +189,7 @@ Tabela: venda_atacado_atacado	- dedicada a aramzenar o preço do produto caso se
         a) inclusão do modelo lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual
         (não serão aceitos modelos que não estejam em conformidade)
-![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/ModeloLogico.jpg?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/Eduardocoutto/Cesta-de-Compras/blob/master/pics/modelologicoHPAC.png?raw=true "Modelo Conceitual")
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
